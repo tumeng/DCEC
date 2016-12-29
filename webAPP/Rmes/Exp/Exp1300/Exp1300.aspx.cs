@@ -46,8 +46,8 @@ namespace Rmes.WebApp.Rmes.Exp
             theUserID = theUserManager.getUserId();
             if (!IsPostBack)
             {
-                cdate1.Value = DateTime.Today.AddDays(-3);
-                cdate2.Value = DateTime.Today.AddDays(1);
+                //cdate1.Value = DateTime.Today.AddDays(-3);
+                //cdate2.Value = DateTime.Today.AddDays(1);
                 List<ProductLineEntity> plineEntities = ProductLineFactory.GetAll();
                 foreach (var p in plineEntities)
                 {
