@@ -1,0 +1,178 @@
+
+<%@ Register TagPrefix="ajax" Namespace="System.Web.UI" Assembly="System.Web.Extensions, Version=1.0.61025.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" %>
+<%@ Register TagPrefix="asp" Namespace="System.Web.UI.WebControls.WebParts" Assembly="System.Web, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" %>
+<%@ Register TagPrefix="dx" Namespace="DevExpress.Web.ASPxEditors" Assembly="DevExpress.Web.ASPxEditors.v11.1, Version=11.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" %>
+<%@ Register TagPrefix="dx" Namespace="DevExpress.Web.ASPxGridView" Assembly="DevExpress.Web.ASPxGridView.v11.1, Version=11.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" %>
+<%@ Register TagPrefix="dx" Namespace="DevExpress.Web.ASPxGridLookup" Assembly="DevExpress.Web.ASPxGridView.v11.1, Version=11.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" %>
+<%@ Register assembly="DevExpress.Web.v11.1, Version=11.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" namespace="DevExpress.Web.ASPxDocking" tagprefix="dx" %>
+<%@ Register TagPrefix="dx" Namespace="DevExpress.Data" Assembly="DevExpress.Data.v11.1, Version=11.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" %>
+<%@ Register TagPrefix="dx" Namespace="DevExpress.Web.ASPxMenu" Assembly="DevExpress.Web.v11.1, Version=11.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" %>
+<%@ Register TagPrefix="dx" Namespace="DevExpress.Web.ASPxTreeList" Assembly="DevExpress.Web.ASPxTreeList.v11.1, Version=11.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" %>
+
+<asp:Label runat="server" Font-Size="9pt" Font-Names="Arial"></asp:Label>
+<asp:RadioButton runat="server"  Font-Size="9pt" Font-Names="Arial"></asp:RadioButton>
+<asp:CheckBox  runat="server" Font-Size="9pt" />
+<asp:TextBox runat="server" CssClass="textbox" Font-Size="9pt"></asp:TextBox>
+<asp:Button  runat="server"  Height="22px" Font-Size="8pt" Font-Names="Arial" />
+<asp:DropDownList runat="server" Font-Size="9pt" Font-Names="Arial" />
+<asp:ListBox runat="server" Font-Size="9pt" Font-Names="Arial" />
+
+
+<dx:ASPxGridView runat="server" CssPostfix="Glass" CssFilePath="~/App_Themes/Glass/{0}/styles.css" Width="100%" >
+<Styles CssPostfix="Glass" CssFilePath="~/App_Themes/Glass/{0}/styles.css">
+    <Header SortingImageSpacing="5px" ImageSpacing="5px" HorizontalAlign="Center" ></Header>
+    <AlternatingRow Enabled="true" />
+</Styles>
+<SettingsPager  ShowDefaultImages="False" AlwaysShowPager="True" Mode="ShowPager" PageSize="15" Summary-Text="页次：{0} / {1}  (共{2} 行记录，每页15行)" Summary-AllPagesText="页次：{0} / {1}  (共{2} 行记录，每页15行)"  >
+    <FirstPageButton Text="首页" Visible="True"></FirstPageButton>
+    <LastPageButton Text="末页" Visible="True"></LastPageButton>
+    <NextPageButton Text="下一页" Visible="True"></NextPageButton>
+    <PrevPageButton Text="上一页" Visible="True"></PrevPageButton>
+    <AllButton Text="显示所有记录" Visible="True"></AllButton> 
+</SettingsPager>
+<SettingsBehavior AutoFilterRowInputDelay="60000" />
+<ImagesFilterControl>
+    <LoadingPanel Url="~/App_Themes/Glass/Editors/Loading.gif"></LoadingPanel>
+</ImagesFilterControl>
+<Images SpriteCssFilePath="~/App_Themes/Glass/{0}/sprite.css">
+    <LoadingPanelOnStatusBar Url="~/App_Themes/Glass/GridView/gvLoadingOnStatusBar.gif"></LoadingPanelOnStatusBar>
+    <LoadingPanel Url="~/App_Themes/Glass/GridView/Loading.gif"></LoadingPanel>
+</Images>
+<Settings ShowFilterRow="True" ShowGroupPanel="True"  ShowHeaderFilterButton="False" ShowVerticalScrollBar="True" ShowHorizontalScrollBar="false" VerticalScrollableHeight="365" ></Settings>
+<StylesEditors>
+    <CalendarHeader Spacing="11px"></CalendarHeader>
+    <ProgressBar Height="25px"></ProgressBar>
+</StylesEditors>
+<SettingsBehavior ConfirmDelete="True" AllowFocusedRow="true" />
+<SettingsText PopupEditFormCaption="编辑" CommandCancel="取消" CommandDelete="删除" CommandEdit="修改" CommandNew="新增" CommandUpdate="保存" ConfirmDelete="确认要删除吗？" GroupPanel="分组" CommandClearFilter="清除" EmptyDataRow="没有记录显示"/>
+<SettingsEditing Mode="PopupEditForm" PopupEditFormHorizontalAlign="WindowCenter"  PopupEditFormVerticalAlign="WindowCenter"  />
+</dx:ASPxGridView>
+
+
+<dx:ASPxGridLookup runat="server" 
+    AutoGenerateColumns="False"
+    CssFilePath="~/App_Themes/Aqua/{0}/styles.css" CssPostfix="Aqua" 
+     ShowShadow="False" SpriteCssFilePath="~/App_Themes/Aqua/{0}/sprite.css" 
+    >
+    <GridViewImagesEditors>
+        <DropDownEditDropDown>
+            <SpriteProperties HottrackedCssClass="dxEditors_edtDropDownHover_Aqua" 
+                PressedCssClass="dxEditors_edtDropDownPressed_Aqua" />
+        </DropDownEditDropDown>
+        <SpinEditIncrement>
+            <SpriteProperties HottrackedCssClass="dxEditors_edtSpinEditIncrementImageHover_Aqua" 
+                PressedCssClass="dxEditors_edtSpinEditIncrementImagePressed_Aqua" />
+        </SpinEditIncrement>
+        <SpinEditDecrement>
+            <SpriteProperties HottrackedCssClass="dxEditors_edtSpinEditDecrementImageHover_Aqua" 
+                PressedCssClass="dxEditors_edtSpinEditDecrementImagePressed_Aqua" />
+        </SpinEditDecrement>
+        <SpinEditLargeIncrement>
+            <SpriteProperties HottrackedCssClass="dxEditors_edtSpinEditLargeIncImageHover_Aqua" 
+                PressedCssClass="dxEditors_edtSpinEditLargeIncImagePressed_Aqua" />
+        </SpinEditLargeIncrement>
+        <SpinEditLargeDecrement>
+            <SpriteProperties HottrackedCssClass="dxEditors_edtSpinEditLargeDecImageHover_Aqua" 
+                PressedCssClass="dxEditors_edtSpinEditLargeDecImagePressed_Aqua" />
+        </SpinEditLargeDecrement>
+    </GridViewImagesEditors>
+    <GridViewImages SpriteCssFilePath="~/App_Themes/Aqua/{0}/sprite.css">
+        <LoadingPanelOnStatusBar Url="~/App_Themes/Aqua/GridView/gvLoadingOnStatusBar.gif"></LoadingPanelOnStatusBar>
+        <LoadingPanel Url="~/App_Themes/Aqua/GridView/Loading.gif"></LoadingPanel>
+    </GridViewImages>
+    <ButtonEditEllipsisImage Height="3px" 
+        Url="~/App_Themes/Aqua/Editors/edtEllipsis.png" 
+        UrlDisabled="~/App_Themes/Aqua/Editors/edtEllipsisDisabled.png" 
+        UrlHottracked="~/App_Themes/Aqua/Editors/edtEllipsisHottracked.png" 
+        UrlPressed="~/App_Themes/Aqua/Editors/edtEllipsisPressed.png" Width="12px">
+    </ButtonEditEllipsisImage>
+    <GridViewImagesFilterControl>
+        <LoadingPanel Url="~/App_Themes/Aqua/Editors/Loading.gif"></LoadingPanel>
+    </GridViewImagesFilterControl>
+    <DropDownButton>
+        <Image>
+            <SpriteProperties HottrackedCssClass="dxEditors_edtDropDownHover_Aqua" 
+                PressedCssClass="dxEditors_edtDropDownPressed_Aqua" />
+        </Image>
+    </DropDownButton>
+    <ValidationSettings>
+        <ErrorFrameStyle ImageSpacing="4px">
+            <ErrorTextPaddings PaddingLeft="4px" />
+        </ErrorFrameStyle>
+    </ValidationSettings>
+    <GridViewProperties>
+        <SettingsBehavior AllowFocusedRow="True" AllowSelectSingleRowOnly="True" /><Settings ShowFilterRow="True" />
+        </GridViewProperties>
+        <GridViewStyles>
+            <LoadingPanel ImageSpacing="8px"></LoadingPanel>
+        </GridViewStyles>
+        <GridViewStylesEditors>
+            <CalendarHeader Spacing="1px"></CalendarHeader>
+            <ProgressBar Height="25px"></ProgressBar>
+    </GridViewStylesEditors>
+</dx:ASPxGridLookup>
+
+<dx:ASPxDockPanel runat="server" LoadingPanelImagePosition="Top">
+    <Styles CssFilePath="~/App_Themes/Aqua/{0}/styles.css" CssPostfix="Aqua">
+        <Content VerticalAlign="Top"></Content>
+    </Styles>
+    <Images SpriteCssFilePath="~/App_Themes/Aqua/{0}/sprite.css">
+        <LoadingPanel Url="~/App_Themes/Aqua/Web/Loading.gif"></LoadingPanel>
+    </Images>
+</dx:ASPxDockPanel>
+
+<dx:ASPxMenu runat="server"
+    CssFilePath="~/App_Themes/Glass/{0}/styles.css" SpriteCssFilePath="~/App_Themes/Glass/{0}/sprite.css" CssPostfix="Glass"
+    AutoSeparators="RootOnly">
+    <SubMenuStyle GutterWidth="0px"></SubMenuStyle>
+    <ItemStyle VerticalAlign="Middle" PopOutImageSpacing="7px" DropDownButtonSpacing="12px" ToolbarPopOutImageSpacing="8px" ToolbarDropDownButtonSpacing="8px"></ItemStyle>
+    <RootItemSubMenuOffset FirstItemY="-2" LastItemY="-2" Y="-2" FirstItemX="-1" LastItemX="-1" X="-1" />
+    <LoadingPanelImage Url="~/App_Themes/Glass/Web/Loading.gif"></LoadingPanelImage>
+</dx:ASPxMenu>
+<dx:ASPxMenu runat="server" SkinID="MenuToolBar" CssFilePath="~/App_Themes/Glass/{0}/styles.css" ShowPopOutImages="True"
+    CssPostfix="Glass" SpriteCssFilePath="~/App_Themes/Glass/{0}/sprite.css" SeparatorHeight="100%"
+    AutoSeparators="None" Width="100%" ItemAutoWidth="False">
+    <SubMenuStyle GutterWidth="0px"  ></SubMenuStyle>
+    <RootItemSubMenuOffset FirstItemX="-1" X="-1" FirstItemY="-1" Y="-1"/>
+    <ItemStyle DropDownButtonSpacing="12px"></ItemStyle>
+    <LoadingPanelImage Url="~/App_Themes/Glass/Web/Loading.gif"></LoadingPanelImage>
+</dx:ASPxMenu>
+<dx:ASPxMenu runat="server" SkinID="MenuButtons" SpriteCssFilePath="~/App_Themes/Glass/{0}/sprite.css" CssFilePath="~/App_Themes/Glass/{0}/styles.css" SeparatorColor="Transparent"
+    AutoSeparators="RootOnly" ItemSpacing="0px" ShowPopOutImages="True" CssPostfix="Glass" CssClass="menuButtons_Glass">
+    <Border BorderWidth="0px"/>
+    <RootItemSubMenuOffset X="-1" LastItemX="-1" FirstItemX="-1"></RootItemSubMenuOffset>
+    <SubMenuItemStyle Wrap="False"></SubMenuItemStyle>
+    <LoadingPanelImage Url="~/App_Themes/Glass/Web/Loading.gif"></LoadingPanelImage>
+</dx:ASPxMenu>
+<dx:ASPxMenu runat="server" SkinID="MenuLinks" CssFilePath="~/App_Themes/Glass/{0}/styles.css" ShowPopOutImages="True"
+    CssPostfix="Glass" SpriteCssFilePath="~/App_Themes/Glass/{0}/sprite.css" SeparatorWidth="1px"  
+    EnableDefaultAppearance="False" CssClass="menuLinks_Glass">
+    <LoadingPanelImage Url="~/App_Themes/Glass/Web/Loading.gif"></LoadingPanelImage>
+</dx:ASPxMenu>
+
+<dx:ASPxTreeList runat="server">
+    <Styles CssFilePath="~/App_Themes/Glass/{0}/styles.css" CssPostfix="Glass" />
+    <Images SpriteCssFilePath="~/App_Themes/Glass/{0}/sprite.css">
+        <LoadingPanel Url="~/App_Themes/Glass/TreeList/Loading.gif"></LoadingPanel>
+    </Images>
+    <SettingsText CommandCancel="取消" CommandDelete="删除" CommandEdit="修改" CommandNew="新增" CommandUpdate="保存" ConfirmDelete="确认要删除吗？" RecursiveDeleteError = "不允许直接删除父节点！"/>
+</dx:ASPxTreeList>
+
+<dx:ASPxComboBox runat="server" IncrementalFilteringMode="StartsWith" DropDownStyle="DropDown"
+    CssFilePath="~/App_Themes/Aqua/{0}/styles.css" CssPostfix="Aqua" 
+    LoadingPanelImagePosition="Top" ShowShadow="False" 
+    SpriteCssFilePath="~/App_Themes/Aqua/{0}/sprite.css" >
+    <LoadingPanelImage Url="~/App_Themes/Aqua/Editors/Loading.gif">
+    </LoadingPanelImage>
+    <DropDownButton>
+        <Image>
+            <SpriteProperties HottrackedCssClass="dxEditors_edtDropDownHover_Aqua" 
+                PressedCssClass="dxEditors_edtDropDownPressed_Aqua" />
+        </Image>
+    </DropDownButton>                         
+    <ValidationSettings>
+        <ErrorFrameStyle ImageSpacing="4px">
+            <ErrorTextPaddings PaddingLeft="4px" />
+        </ErrorFrameStyle>
+    </ValidationSettings>
+</dx:ASPxComboBox>

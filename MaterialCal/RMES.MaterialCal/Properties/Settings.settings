@@ -1,0 +1,63 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="RMES.MaterialCal.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="kf_path" Type="System.String" Scope="User">
+      <Value Profile="(Default)">c:\kf</Value>
+    </Setting>
+    <Setting Name="sf_path" Type="System.String" Scope="User">
+      <Value Profile="(Default)">c:\sf</Value>
+    </Setting>
+    <Setting Name="barcode_remotepath" Type="System.String" Scope="User">
+      <Value Profile="(Default)">e:\barcode</Value>
+    </Setting>
+    <Setting Name="barcode_localpath" Type="System.String" Scope="User">
+      <Value Profile="(Default)">c:\barcode1</Value>
+    </Setting>
+    <Setting Name="barcode_localpathbak" Type="System.String" Scope="User">
+      <Value Profile="(Default)">c:\barcode2</Value>
+    </Setting>
+    <Setting Name="sf_mobile" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="ekf_mobile" Type="System.String" Scope="User">
+      <Value Profile="(Default)">13995728929;13227503432;13774160723;13995745273</Value>
+    </Setting>
+    <Setting Name="wkf_mobile" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="ekf_mail" Type="System.String" Scope="User">
+      <Value Profile="(Default)">gao.yuan@dcec.com.cn;chen.dengqing@dcec.com.cn;huang.yong@dcec.com.cn</Value>
+    </Setting>
+    <Setting Name="wkf_mail" Type="System.String" Scope="User">
+      <Value Profile="(Default)">zhang.jun01@dcec.com.cn</Value>
+    </Setting>
+    <Setting Name="sf_xml_path" Type="System.String" Scope="User">
+      <Value Profile="(Default)">c:\sf1\xml</Value>
+    </Setting>
+    <Setting Name="sf_xml_bak_path" Type="System.String" Scope="User">
+      <Value Profile="(Default)">c:\sf1\xml3</Value>
+    </Setting>
+    <Setting Name="sf_txt_path" Type="System.String" Scope="User">
+      <Value Profile="(Default)">c:\sf1\txt</Value>
+    </Setting>
+    <Setting Name="sf_txt_bak_path" Type="System.String" Scope="User">
+      <Value Profile="(Default)">c:\sf1\txt3</Value>
+    </Setting>
+    <Setting Name="sf_txt_supply_path" Type="System.String" Scope="User">
+      <Value Profile="(Default)">c:\SM01</Value>
+    </Setting>
+    <Setting Name="sf_txt_supply_bak_path" Type="System.String" Scope="User">
+      <Value Profile="(Default)">c:\SM03</Value>
+    </Setting>
+    <Setting Name="sf_xml_remote_path" Type="System.String" Scope="User">
+      <Value Profile="(Default)">\\192.168.112.144\sf</Value>
+    </Setting>
+    <Setting Name="sf_txt_remote_path" Type="System.String" Scope="User">
+      <Value Profile="(Default)">\\192.168.112.144\sf</Value>
+    </Setting>
+    <Setting Name="sf_txt_supply_remote_path" Type="System.String" Scope="User">
+      <Value Profile="(Default)">\\192.168.112.144\sf</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

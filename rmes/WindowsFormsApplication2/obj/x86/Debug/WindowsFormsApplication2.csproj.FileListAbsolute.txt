@@ -1,0 +1,10 @@
+D:\dcec2016\DCECMES\rmes\WindowsFormsApplication2\bin\Debug\WindowsFormsApplication2.exe.manifest
+D:\dcec2016\DCECMES\rmes\WindowsFormsApplication2\bin\Debug\WindowsFormsApplication2.application
+D:\dcec2016\DCECMES\rmes\WindowsFormsApplication2\bin\Debug\WindowsFormsApplication2.exe
+D:\dcec2016\DCECMES\rmes\WindowsFormsApplication2\bin\Debug\WindowsFormsApplication2.pdb
+D:\dcec2016\DCECMES\rmes\WindowsFormsApplication2\obj\x86\Debug\WindowsFormsApplication2.Properties.Resources.resources
+D:\dcec2016\DCECMES\rmes\WindowsFormsApplication2\obj\x86\Debug\WindowsFormsApplication2.csproj.GenerateResource.Cache
+D:\dcec2016\DCECMES\rmes\WindowsFormsApplication2\obj\x86\Debug\WindowsFormsApplication2.exe.manifest
+D:\dcec2016\DCECMES\rmes\WindowsFormsApplication2\obj\x86\Debug\WindowsFormsApplication2.application
+D:\dcec2016\DCECMES\rmes\WindowsFormsApplication2\obj\x86\Debug\WindowsFormsApplication2.exe
+D:\dcec2016\DCECMES\rmes\WindowsFormsApplication2\obj\x86\Debug\WindowsFormsApplication2.pdb

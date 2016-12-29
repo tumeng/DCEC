@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<RmesXml>
+  <!-->系统字符串分隔符<-->
+  <SeparatorStr>@rmes@</SeparatorStr>
+  <!-->工艺文件路径<-->
+  <optionFilePath>C:\\Program Files\\bdcs\\RmesWinSetup\\files</optionFilePath>
+  <!--<optionFilePath>C:\\Program Files\\bdcs\\RmesWinSetup\\files</optionFilePath>-->
+  <!-->兰光创新路径<-->
+  <LGCXPath>http://172.30.110.1/DSS/Logon.aspx?</LGCXPath>
+  <!-->ScriptX路径<-->
+  <ScriptXPath>http://172.30.110.1/yz/smsx.cab#Version=6,5,439,12</ScriptXPath>
+</RmesXml>

@@ -1,0 +1,3023 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{156FE958-C9D1-4B1A-A80B-B23D8BBE04EF}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Rmes.WebApp</RootNamespace>
+    <AssemblyName>Rmes.WebApp</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <UseIISExpress>false</UseIISExpress>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <PackageAsSingleFile>false</PackageAsSingleFile>
+    <PublishDatabases>false</PublishDatabases>
+    <FilesToIncludeForPublish>OnlyFilesToRunTheApp</FilesToIncludeForPublish>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.Charts.v11.1.Core, Version=11.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Data.v11.1, Version=11.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.PivotGrid.v11.1.Core, Version=11.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Printing.v11.1.Core, Version=11.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.RichEdit.v11.1.Core, Version=11.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Utils.v11.1, Version=11.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Web.ASPxEditors.v11.1, Version=11.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Web.ASPxGridView.v11.1, Version=11.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Web.ASPxGridView.v11.1.Export, Version=11.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Web.ASPxPivotGrid.v11.1, Version=11.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Web.ASPxThemes.v11.1, Version=11.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Web.ASPxTreeList.v11.1, Version=11.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Web.v11.1, Version=11.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v11.1, Version=11.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v11.1.Web, Version=11.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+    </Reference>
+    <Reference Include="DevExpress.XtraEditors.v11.1, Version=11.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraGrid.v11.1, Version=11.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v11.1, Version=11.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraPivotGrid.v11.1, Version=11.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraPrinting.v11.1, Version=11.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraReports.v11.1, Version=11.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraReports.v11.1.Web, Version=11.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraRichEdit.v11.1, Version=11.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraTreeList.v11.1, Version=11.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=12.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Oracle.DataAccess, Version=2.112.1.0, Culture=neutral, PublicKeyToken=89b483f429c47342, processorArchitecture=AMD64">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\public\Lib\Oracle.DataAccess.dll</HintPath>
+    </Reference>
+    <Reference Include="PetaPoco, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Rmes.Public\Lib\PetaPoco.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Remoting" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bin\AxInterop.WMPLib.dll" />
+    <Content Include="bin\Interop.SpeechLib.dll" />
+    <Content Include="bin\Lib\LEDSender.dll" />
+    <Content Include="bin\Lib\Oracle.DataAccess.dll" />
+    <Content Include="bin\Lib\PetaPoco.dll" />
+    <Content Include="bin\Lib\System.Data.SQLite.dll" />
+    <Content Include="bin\Lib\System.Data.SQLite.Linq.dll" />
+    <Content Include="bin\NAudio.dll" />
+    <Content Include="bin\OCI\oci.dll" />
+    <Content Include="bin\OCI\ocijdbc11.dll" />
+    <Content Include="bin\OCI\ociw32.dll" />
+    <Content Include="bin\OCI\orannzsbb11.dll" />
+    <Content Include="bin\OCI\oraocci11.dll" />
+    <Content Include="bin\OCI\oraociei11.dll" />
+    <Content Include="bin\OCI\OraOps11w.dll" />
+    <Content Include="bin\Oracle.DataAccess.dll" />
+    <Content Include="bin\PetaPoco.dll" />
+    <Content Include="bin\Rmes.DA.dll" />
+    <Content Include="bin\Rmes.DA.pdb" />
+    <Content Include="bin\Rmes.Public.dll" />
+    <Content Include="bin\Rmes.Public.pdb" />
+    <Content Include="bin\Rmes.WebApp.dll" />
+    <Content Include="bin\Rmes.WebApp.pdb" />
+    <Content Include="Default.aspx" />
+    <Content Include="file\A\go.html" />
+    <Content Include="file\B\00227553.txt" />
+    <Content Include="file\B\go.html" />
+    <Content Include="Global.asax" />
+    <Content Include="RmesLogin.aspx" />
+    <Content Include="Rmes\Atpu\atpu1100\atpu1100.aspx" />
+    <Content Include="Rmes\Atpu\atpu1200\atpu1200.aspx" />
+    <Content Include="Rmes\Atpu\atpu1200\atpu1201.aspx" />
+    <Content Include="Rmes\Atpu\atpu1300\atpu1300.aspx" />
+    <Content Include="Rmes\Atpu\atpu1400\atpu1400.aspx" />
+    <Content Include="Rmes\Atpu\atpu1500\atpu1500.aspx" />
+    <Content Include="Rmes\Atpu\atpu1600\atpu1600.aspx" />
+    <Content Include="Rmes\Atpu\atpu1700\atpu1700.aspx" />
+    <Content Include="Rmes\Atpu\atpu1800\atpu1800.aspx" />
+    <Content Include="Rmes\Atpu\atpu1900\atpu1900.aspx" />
+    <Content Include="Rmes\Atpu\atpu1A00\atpu1A00.aspx" />
+    <Content Include="Rmes\Atpu\atpu1B00\atpu1B00.aspx" />
+    <Content Include="Rmes\Atpu\atpu1C00\atpu1C00.aspx" />
+    <Content Include="Rmes\Atpu\atpu1D00\atpu1D00.aspx" />
+    <Content Include="Rmes\Atpu\atpu1E00\atpu1E00.aspx" />
+    <Content Include="Rmes\Atpu\atpu1E00\atpu1E01.aspx" />
+    <Content Include="Rmes\Atpu\atpu2000\atpu2000.aspx" />
+    <Content Include="Rmes\Atpu\atpu2100\atpu2100.aspx" />
+    <Content Include="Rmes\Atpu\atpu2200\atpu2200.aspx" />
+    <Content Include="Rmes\Atpu\atpu2300\atpu2300.aspx" />
+    <Content Include="Rmes\Atpu\atpu2400\atpu2400.aspx" />
+    <Content Include="Rmes\Atpu\atpu2500\atpu2500.aspx" />
+    <Content Include="Rmes\Atpu\atpu2600\atpu2600.aspx" />
+    <Content Include="Rmes\Atpu\atpu2700\atpu2700.aspx" />
+    <Content Include="Rmes\Atpu\atpu2800\atpu2800.aspx" />
+    <Content Include="Rmes\Atpu\atpu2900\atpu2900.aspx" />
+    <Content Include="Rmes\Ems\ems1100\ems1100.aspx" />
+    <Content Include="Rmes\Ems\ems1200\ems1200.aspx" />
+    <Content Include="Rmes\Ems\ems2100\ems2100.aspx" />
+    <Content Include="Rmes\Ems\ems2200\ems2200.aspx" />
+    <Content Include="Rmes\EpdDcec\epdProcessNote\epdPic.aspx" />
+    <Content Include="Rmes\EpdDcec\epdProcessNote\epdProcessNote.aspx" />
+    <Content Include="Rmes\EpdDcec\epdProcessNote\epdProcessNoteNew.aspx" />
+    <Content Include="Rmes\EpdDcec\epdProcessNote\epdProcessNoteQry.aspx" />
+    <Content Include="Rmes\EpdDcec\epdQualityAlert\epdQualityAlert.aspx" />
+    <Content Include="Rmes\EpdDcec\epdQualityAlert\epdQualityAlertNew.aspx" />
+    <Content Include="Rmes\EpdDcec\epdQualityQA\epdQualityQA.aspx" />
+    <Content Include="Rmes\EpdDcec\epdQualityQA\epdQualityQANew.aspx" />
+    <Content Include="Rmes\EpdDcec\test\test.aspx" />
+    <Content Include="Rmes\Epd\epd1100\epd1100.aspx" />
+    <Content Include="Rmes\Epd\epd1200\epd1200.aspx" />
+    <Content Include="Rmes\Epd\epd1400\epd1400.aspx" />
+    <Content Include="Rmes\Epd\epd1500\epd1500.aspx" />
+    <Content Include="Rmes\Epd\epd1600\epd1600.aspx" />
+    <Content Include="Rmes\Epd\epd1700\epd1700.aspx" />
+    <Content Include="Rmes\Epd\epd1800\epd1800.aspx" />
+    <Content Include="Rmes\Epd\epd1900\epd1900.aspx" />
+    <Content Include="Rmes\Epd\epd1900\epd1901.aspx" />
+    <Content Include="Rmes\Epd\epd1A00\epd1A00.aspx" />
+    <Content Include="Rmes\Epd\epd1A00\epd1A001.aspx" />
+    <Content Include="Rmes\Epd\epd2000\epd2000.aspx" />
+    <Content Include="Rmes\Epd\epd2100\epd2100.aspx" />
+    <Content Include="Rmes\Epd\epd2200\epd2200.aspx" />
+    <Content Include="Rmes\Epd\epd2300\epd2300.aspx" />
+    <Content Include="Rmes\Epd\epd2700\epd2700.aspx" />
+    <Content Include="Rmes\Epd\epd2700\epd2701.aspx" />
+    <Content Include="Rmes\Epd\epd2900\epd2900.aspx" />
+    <Content Include="Rmes\Epd\epd3200\epd3200.aspx" />
+    <Content Include="Rmes\Epd\epd3300\epd3300.aspx" />
+    <Content Include="Rmes\Epd\epd3400\epd3400.aspx" />
+    <Content Include="Rmes\Epd\epd3400\epd3401.aspx" />
+    <Content Include="Rmes\Epd\epd3500\epd3500.aspx" />
+    <Content Include="Rmes\Epd\epd3600\epd3601.aspx" />
+    <Content Include="Rmes\Epd\epd3600\epd3600.aspx" />
+    <Content Include="Rmes\Epd\epd3700\epd3700.aspx" />
+    <Content Include="Rmes\Epd\epd3700\epd3701.aspx" />
+    <Content Include="Rmes\Epd\epd3800\epd3800.aspx" />
+    <Content Include="Rmes\Epd\epd3800\epd3801.aspx" />
+    <Content Include="Rmes\Epd\epd3900\epd3900.aspx" />
+    <Content Include="Rmes\Epd\epd3900\epd3901.aspx" />
+    <Content Include="Rmes\Epd\epd3A00\epd3A00.aspx" />
+    <Content Include="Rmes\Epd\epd3A00\epd3A01.aspx" />
+    <Content Include="Rmes\Epd\epd4100\epd4100.aspx" />
+    <Content Include="Rmes\Epd\epd4100\epd4101.aspx" />
+    <Content Include="Rmes\Epd\epd4200\epd4200.aspx" />
+    <Content Include="Rmes\Epd\epd4300\epd4300.aspx" />
+    <Content Include="Rmes\Epd\epd4300\epd4301.aspx" />
+    <Content Include="Rmes\Epd\epd4400\epd4400.aspx" />
+    <Content Include="Rmes\Epd\epd4500\epd4500.aspx" />
+    <Content Include="Rmes\Exception\DefaultException.aspx" />
+    <Content Include="Rmes\Exception\NoRightException.aspx" />
+    <Content Include="Rmes\Exp\Exp1000\Exp1000.aspx" />
+    <Content Include="Rmes\Exp\Exp1100\Exp1100.aspx" />
+    <Content Include="Rmes\Exp\Exp1200\Exp1200.aspx" />
+    <Content Include="Rmes\Exp\Exp1300\Exp1300.aspx" />
+    <Content Include="Rmes\Exp\Exp1400\Exp1400.aspx" />
+    <Content Include="Rmes\Exp\Exp1500\Exp1500.aspx" />
+    <Content Include="Rmes\Exp\Exp1600\Exp1600.aspx" />
+    <Content Include="Rmes\Exp\Exp1700\Exp1700.aspx" />
+    <Content Include="Rmes\Exp\Exp2000\Exp2000.aspx" />
+    <Content Include="Rmes\Exp\Exp2100\Exp2100.aspx" />
+    <Content Include="Rmes\Exp\Exp2200\Exp2200.aspx" />
+    <Content Include="Rmes\Exp\Exp2300\Exp2300.aspx" />
+    <Content Include="Rmes\Exp\Exp2400\Exp2400.aspx" />
+    <Content Include="Rmes\File\入出库\lshqd.xls" />
+    <Content Include="Rmes\Help\index.files\filelist.xml" />
+    <Content Include="Rmes\Help\index.files\image001.gif" />
+    <Content Include="Rmes\Help\index.files\image002.gif" />
+    <Content Include="Rmes\Help\index.files\image0021.gif" />
+    <Content Include="Rmes\Help\index.files\image003.gif" />
+    <Content Include="Rmes\Help\index.files\image004.gif" />
+    <Content Include="Rmes\Help\index.files\water_1018.jpg" />
+    <Content Include="Rmes\Help\index.files\water_10181.jpg" />
+    <Content Include="Rmes\Help\index.htm" />
+    <Content Include="Rmes\Help\sam1100.htm" />
+    <Content Include="Rmes\Interface\inf1000\inf1000.aspx" />
+    <Content Include="Rmes\Interface\inf2000\inf2000.aspx" />
+    <Content Include="Rmes\Interface\inf2100\inf2100.aspx" />
+    <Content Include="Rmes\Interface\inf2200\inf2200.aspx" />
+    <Content Include="Rmes\Interface\inf2300\inf2300.aspx" />
+    <Content Include="Rmes\Interface\inf2400\inf2400.aspx" />
+    <Content Include="Rmes\Interface\inf3000\inf3000.aspx" />
+    <Content Include="Rmes\Interface\inf3100\inf3100.aspx" />
+    <Content Include="Rmes\Interface\inf3200\inf3200.aspx" />
+    <Content Include="Rmes\Interface\inf3300\inf3300.aspx" />
+    <Content Include="Rmes\Inv\inv1100\inv1100.aspx" />
+    <Content Include="Rmes\Inv\inv1200\inv1200.aspx" />
+    <Content Include="Rmes\Inv\inv2100\inv2100.aspx" />
+    <Content Include="Rmes\Inv\inv2100\inv2101.aspx" />
+    <Content Include="Rmes\Inv\inv2200\inv2200.aspx" />
+    <Content Include="Rmes\Inv\inv2300\inv2300.aspx" />
+    <Content Include="Rmes\Inv\inv2400\inv2400.aspx" />
+    <Content Include="Rmes\Inv\inv2500\inv2500.aspx" />
+    <Content Include="Rmes\Inv\inv2600\inv2600.aspx" />
+    <Content Include="Rmes\Inv\inv3100\inv3100.aspx" />
+    <Content Include="Rmes\Inv\inv3200\inv3200.aspx" />
+    <Content Include="Rmes\Inv\inv8000\inv8000.aspx" />
+    <Content Include="Rmes\Inv\inv8100\inv8100.aspx" />
+    <Content Include="Rmes\Inv\inv8600\inv8600.aspx" />
+    <Content Include="Rmes\Inv\inv8700\inv8700.aspx" />
+    <Content Include="Rmes\Inv\inv8800\inv8800.aspx" />
+    <Content Include="Rmes\Inv\inv8900\inv8900.aspx" />
+    <Content Include="Rmes\Inv\inv9000\inv9100.aspx" />
+    <Content Include="Rmes\Inv\inv9000\inv9200.aspx" />
+    <Content Include="Rmes\Inv\inv9100\inv9100.aspx" />
+    <Content Include="Rmes\Inv\inv9200\inv9200.aspx" />
+    <Content Include="Rmes\Inv\inv9300\inv9300.aspx" />
+    <Content Include="Rmes\Inv\inv9400\inv9400.aspx" />
+    <Content Include="Rmes\Inv\inv9500\inv9500.aspx" />
+    <Content Include="Rmes\Inv\inv9600\inv9600.aspx" />
+    <Content Include="Rmes\Inv\inv9700\inv9700.aspx" />
+    <Content Include="Rmes\Inv\inv9800\inv9800.aspx" />
+    <Content Include="Rmes\Inv\inv9900\inv9900.aspx" />
+    <Content Include="Rmes\Login\blank.aspx" />
+    <Content Include="Rmes\Login\Menu.js" />
+    <Content Include="Rmes\Login\relogin.aspx" />
+    <Content Include="Rmes\Login\RmesDefaultPage.aspx" />
+    <Content Include="Rmes\Login\RmesIndex.aspx" />
+    <Content Include="Rmes\Login\RmesLogout.aspx" />
+    <Content Include="Rmes\Login\RmesReLogin.aspx" />
+    <Content Include="Rmes\MmsDcec\mmsMaterialMove\mmsMaterialMove.aspx" />
+    <Content Include="Rmes\MmsDcec\mmsMaterialMove\mmsMaterialMoveGZ.aspx" />
+    <Content Include="Rmes\MmsDcec\mmsMaterialMove\mmsMaterialMoveLineside.aspx" />
+    <Content Include="Rmes\MmsDcec\mmsMaterialMove\mmsMaterialMoveLQ.aspx" />
+    <Content Include="Rmes\MmsDcec\mmsMaterialRequisition\mmsMaterialRequisition.aspx" />
+    <Content Include="Rmes\MmsDcec\mmsMaterialRequisition\mmsMaterialRequisitionDetail.aspx" />
+    <Content Include="Rmes\MmsDcec\mmsMaterialRequisition\mmsMaterialRequisitionGZ.aspx" />
+    <Content Include="Rmes\MmsDcec\mmsMaterialRequisition\mmsMaterialRequisitionLQ.aspx" />
+    <Content Include="Rmes\MmsDcec\mmsMaterialRequisition\mmsMaterialRequisitionQry.aspx" />
+    <Content Include="Rmes\MmsDcec\mmsMaterialSend\mmsMaterialSend.aspx" />
+    <Content Include="Rmes\MmsDcec\mmsProductConfirm\mmsMultiReplaceDelProductConfirm.aspx" />
+    <Content Include="Rmes\MmsDcec\mmsProductConfirm\mmsMultiReplaceProductConfirm.aspx" />
+    <Content Include="Rmes\MmsDcec\mmsProductConfirm\mmsOneReplaceDelProductConfirm.aspx" />
+    <Content Include="Rmes\MmsDcec\mmsProductConfirm\mmsOneReplaceProductConfirm.aspx" />
+    <Content Include="Rmes\MmsDcec\mmsReplaceRelationshipQry\mmsReplaceRelationshipQry.aspx" />
+    <Content Include="Rmes\MmsDcec\mmsReplaceRelationshipSet\mmsReplaceRelationshipCopy.aspx" />
+    <Content Include="Rmes\MmsDcec\mmsReplaceRelationshipSet\mmsReplaceRelationshipSet.aspx" />
+    <Content Include="Rmes\MmsDcec\mmsReplaceRelationshipSet\mmsReplaceRelationshipSetNew.aspx" />
+    <Content Include="Rmes\MmsDcec\mmsReplaceRelationshipSet\mmsReplaceRelationshipSetQry.aspx" />
+    <Content Include="Rmes\MmsDcec\mmsReplaceRelationshipUse\mmsConfimedMultiReplaceQuery.aspx" />
+    <Content Include="Rmes\MmsDcec\mmsReplaceRelationshipUse\mmsConfimedOneReplaceQuery.aspx" />
+    <Content Include="Rmes\MmsDcec\mmsReplaceRelationshipUse\mmsConfirmMultiReplace.aspx" />
+    <Content Include="Rmes\MmsDcec\mmsReplaceRelationshipUse\mmsConfirmOneReplace.aspx" />
+    <Content Include="Rmes\MmsDcec\mmsReplaceRelationshipUse\mmsMultiReplace.aspx" />
+    <Content Include="Rmes\MmsDcec\mmsReplaceRelationshipUse\mmsOneReplace.aspx" />
+    <Content Include="Rmes\MmsDcec\mmsReplaceRelationshipUse\mmsReplaceRelationshipQry.aspx" />
+    <Content Include="Rmes\MmsDcec\mmsReplaceRelationshipUse\mmsReplaceRelationshipUse.aspx" />
+    <Content Include="Rmes\MmsDcec\mmsReplaceRelationshipUse\mmsReplaceReport.aspx" />
+    <Content Include="Rmes\MmsDcec\mmsReplaceRelationshipUse\mmsReplaceResultQry.aspx" />
+    <Content Include="Rmes\MmsDcec\mmsWarehouseConfirm\mmsMultiReplaceDelWhConfirm.aspx" />
+    <Content Include="Rmes\MmsDcec\mmsWarehouseConfirm\mmsMultiReplaceWhConfirm.aspx" />
+    <Content Include="Rmes\MmsDcec\mmsWarehouseConfirm\mmsOneReplaceDelWhConfirm.aspx" />
+    <Content Include="Rmes\MmsDcec\mmsWarehouseConfirm\mmsOneReplaceWhConfirm.aspx" />
+    <Content Include="Rmes\MmsDcec\mmsWarehouseConfirm\mmsWarehouseDelConfirmOne.aspx" />
+    <Content Include="Rmes\Mms\mms1300\mms1300.aspx" />
+    <Content Include="Rmes\Mms\mms1300\mms1301.aspx" />
+    <Content Include="Rmes\Mms\mms1400\mms1400.aspx" />
+    <Content Include="Rmes\Mms\mms1400\mms1401.aspx" />
+    <Content Include="Rmes\Mms\mms1400\mms1402.aspx" />
+    <Content Include="Rmes\Mms\mms1400\mms1403.aspx" />
+    <Content Include="Rmes\Mms\mms1400\mms1404.aspx" />
+    <Content Include="Rmes\Part\part1100\part1100.aspx" />
+    <Content Include="Rmes\Part\part1200\part1200.aspx" />
+    <Content Include="Rmes\Part\part1300\part1300.aspx" />
+    <Content Include="Rmes\Part\part1400\part1400.aspx" />
+    <Content Include="Rmes\Part\part1500\part1500.aspx" />
+    <Content Include="Rmes\Part\part1600\part1600.aspx" />
+    <Content Include="Rmes\Part\part1700\part1700.aspx" />
+    <Content Include="Rmes\Part\part1800\part1800.aspx" />
+    <Content Include="Rmes\Part\part1900\part1900.aspx" />
+    <Content Include="Rmes\Part\part2000\part2000.aspx" />
+    <Content Include="Rmes\Part\part2100\part2100.aspx" />
+    <Content Include="Rmes\Part\part2200\part2200.aspx" />
+    <Content Include="Rmes\Part\part2300\part2300.aspx" />
+    <Content Include="Rmes\Part\part2400\part2400.aspx" />
+    <Content Include="Rmes\Part\part2500\part2500.aspx" />
+    <Content Include="Rmes\Part\part2600\part2600.aspx" />
+    <Content Include="Rmes\Part\part2700\part2700.aspx" />
+    <Content Include="Rmes\Part\part2800\part2800.aspx" />
+    <Content Include="Rmes\Part\part2900\part2900.aspx" />
+    <Content Include="Rmes\Part\part2A00\part2A00.aspx" />
+    <Content Include="Rmes\Part\part2B00\part2B00.aspx" />
+    <Content Include="Rmes\Part\part2C00\part2C00.aspx" />
+    <Content Include="Rmes\Part\part3100\part3100.aspx" />
+    <Content Include="Rmes\Pub\Ascx\CalendarWidget.ascx" />
+    <Content Include="Rmes\Pub\Ascx\DateTimeWidget.ascx" />
+    <Content Include="Rmes\Pub\CommonHandle\commonSign.aspx" />
+    <Content Include="Rmes\Pub\CommonHandle\commonSign_2.aspx" />
+    <Content Include="Rmes\Pub\CommonHandle\DrawFiles.aspx" />
+    <Content Include="Rmes\Pub\CommonHandle\openFile.aspx" />
+    <Content Include="Rmes\Pub\CommonHandle\openFileTwo.aspx" />
+    <Content Include="Rmes\Pub\CommonQuery\CommonDisplay.aspx" />
+    <Content Include="Rmes\Pub\CommonQuery\CommonQueryMore.aspx" />
+    <Content Include="Rmes\Pub\CommonQuery\CommonQuerySingle.aspx" />
+    <Content Include="Rmes\Pub\Css\content.css" />
+    <Content Include="Rmes\Pub\Css\superTables.css" />
+    <Content Include="Rmes\Pub\Flash\3556.swf" />
+    <Content Include="Rmes\Pub\Images\061.jpg" />
+    <Content Include="Rmes\Pub\Images\20071208004101231.png" />
+    <Content Include="Rmes\Pub\Images\add.gif" />
+    <Content Include="Rmes\Pub\Images\arrow.gif" />
+    <Content Include="Rmes\Pub\Images\bar.png" />
+    <Content Include="Rmes\Pub\Images\barBody.png" />
+    <Content Include="Rmes\Pub\Images\barLeft.png" />
+    <Content Include="Rmes\Pub\Images\barRight.png" />
+    <Content Include="Rmes\Pub\Images\bg2.gif" />
+    <Content Include="Rmes\Pub\Images\bg6.gif" />
+    <Content Include="Rmes\Pub\Images\bt2_add.gif" />
+    <Content Include="Rmes\Pub\Images\bt2_del.gif" />
+    <Content Include="Rmes\Pub\Images\bt2_edit.gif" />
+    <Content Include="Rmes\Pub\Images\bt2_query.gif" />
+    <Content Include="Rmes\Pub\Images\btn_down.gif" />
+    <Content Include="Rmes\Pub\Images\btn_up.gif" />
+    <Content Include="Rmes\Pub\Images\bt_export.gif" />
+    <Content Include="Rmes\Pub\Images\bt_help.gif" />
+    <Content Include="Rmes\Pub\Images\bt_last.gif" />
+    <Content Include="Rmes\Pub\Images\bt_next.gif" />
+    <Content Include="Rmes\Pub\Images\bt_print.gif" />
+    <Content Include="Rmes\Pub\Images\bt_refresh.gif" />
+    <Content Include="Rmes\Pub\Images\bt_report.gif" />
+    <Content Include="Rmes\Pub\Images\bt_stop.gif" />
+    <Content Include="Rmes\Pub\Images\bt_toolbox.gif" />
+    <Content Include="Rmes\Pub\Images\button.gif" />
+    <Content Include="Rmes\Pub\Images\cancel.gif" />
+    <Content Include="Rmes\Pub\Images\check.gif" />
+    <Content Include="Rmes\Pub\Images\confirm.gif" />
+    <Content Include="Rmes\Pub\Images\delete.gif" />
+    <Content Include="Rmes\Pub\Images\Down.png" />
+    <Content Include="Rmes\Pub\Images\edit.gif" />
+    <Content Include="Rmes\Pub\Images\edit1.gif" />
+    <Content Include="Rmes\Pub\Images\exit.png" />
+    <Content Include="Rmes\Pub\Images\FirstPage\Calendar.png" />
+    <Content Include="Rmes\Pub\Images\FirstPage\DateTime.png" />
+    <Content Include="Rmes\Pub\Images\FirstPage\Duck.png" />
+    <Content Include="Rmes\Pub\Images\FirstPage\Mail.png" />
+    <Content Include="Rmes\Pub\Images\FirstPage\News.png" />
+    <Content Include="Rmes\Pub\Images\FirstPage\ProductPie.png" />
+    <Content Include="Rmes\Pub\Images\FirstPage\Trading.png" />
+    <Content Include="Rmes\Pub\Images\FirstPage\Weather.png" />
+    <Content Include="Rmes\Pub\Images\lastyear.gif" />
+    <Content Include="Rmes\Pub\Images\logIn.png" />
+    <Content Include="Rmes\Pub\Images\note.gif" />
+    <Content Include="Rmes\Pub\Images\ok.gif" />
+    <Content Include="Rmes\Pub\Images\ok11.gif" />
+    <Content Include="Rmes\Pub\Images\ok22.gif" />
+    <Content Include="Rmes\Pub\Images\ok33.gif" />
+    <Content Include="Rmes\Pub\Images\place.gif" />
+    <Content Include="Rmes\Pub\Images\remend.gif" />
+    <Content Include="Rmes\Pub\Images\reset.jpg" />
+    <Content Include="Rmes\Pub\Images\Re_Out.PNG" />
+    <Content Include="Rmes\Pub\Images\riamb.png" />
+    <Content Include="Rmes\Pub\Images\rmes_login.png" />
+    <Content Include="Rmes\Pub\Images\template\037.jpg" />
+    <Content Include="Rmes\Pub\Images\template\061.jpg" />
+    <Content Include="Rmes\Pub\Images\template\111.png" />
+    <Content Include="Rmes\Pub\Images\template\addFathPlan.gif" />
+    <Content Include="Rmes\Pub\Images\template\addnew.gif" />
+    <Content Include="Rmes\Pub\Images\template\addSonPlan.gif" />
+    <Content Include="Rmes\Pub\Images\template\assignSN.GIF" />
+    <Content Include="Rmes\Pub\Images\template\BatchClose.GIF" />
+    <Content Include="Rmes\Pub\Images\template\BatchIssue.GIF" />
+    <Content Include="Rmes\Pub\Images\template\bg1.gif" />
+    <Content Include="Rmes\Pub\Images\template\bg2.gif" />
+    <Content Include="Rmes\Pub\Images\template\bg6.gif" />
+    <Content Include="Rmes\Pub\Images\template\bt1_inv.gif" />
+    <Content Include="Rmes\Pub\Images\template\bt2_add.gif" />
+    <Content Include="Rmes\Pub\Images\template\bt2_del.gif" />
+    <Content Include="Rmes\Pub\Images\template\bt2_edit.gif" />
+    <Content Include="Rmes\Pub\Images\template\bt2_query.gif" />
+    <Content Include="Rmes\Pub\Images\template\bt_export.gif" />
+    <Content Include="Rmes\Pub\Images\template\bt_help.gif" />
+    <Content Include="Rmes\Pub\Images\template\bt_last.gif" />
+    <Content Include="Rmes\Pub\Images\template\bt_next.gif" />
+    <Content Include="Rmes\Pub\Images\template\bt_print.gif" />
+    <Content Include="Rmes\Pub\Images\template\bt_printFrameNumber.gif" />
+    <Content Include="Rmes\Pub\Images\template\bt_refresh.gif" />
+    <Content Include="Rmes\Pub\Images\template\bt_report.gif" />
+    <Content Include="Rmes\Pub\Images\template\bt_stop.gif" />
+    <Content Include="Rmes\Pub\Images\template\cancel.GIF" />
+    <Content Include="Rmes\Pub\Images\template\cancelMatConfirm.GIF" />
+    <Content Include="Rmes\Pub\Images\template\cancelPlanConfirm.GIF" />
+    <Content Include="Rmes\Pub\Images\template\cancelTechConfirm.GIF" />
+    <Content Include="Rmes\Pub\Images\template\cancel_confirm.gif" />
+    <Content Include="Rmes\Pub\Images\template\cer1.gif" />
+    <Content Include="Rmes\Pub\Images\template\cer2.gif" />
+    <Content Include="Rmes\Pub\Images\template\cer2_bg.gif" />
+    <Content Include="Rmes\Pub\Images\template\cer3.gif" />
+    <Content Include="Rmes\Pub\Images\template\cer3_bg.gif" />
+    <Content Include="Rmes\Pub\Images\template\cer4.gif" />
+    <Content Include="Rmes\Pub\Images\template\cer4_bg.gif" />
+    <Content Include="Rmes\Pub\Images\template\CheckOut.gif" />
+    <Content Include="Rmes\Pub\Images\template\close.GIF" />
+    <Content Include="Rmes\Pub\Images\template\confirm.GIF" />
+    <Content Include="Rmes\Pub\Images\template\ConfirmComplete.GIF" />
+    <Content Include="Rmes\Pub\Images\template\ConfirmToHot.GIF" />
+    <Content Include="Rmes\Pub\Images\template\confirm_all.gif" />
+    <Content Include="Rmes\Pub\Images\template\confirm_one.gif" />
+    <Content Include="Rmes\Pub\Images\template\CoolPlanQuery.GIF" />
+    <Content Include="Rmes\Pub\Images\template\createBook.gif" />
+    <Content Include="Rmes\Pub\Images\template\createRKD.GIF" />
+    <Content Include="Rmes\Pub\Images\template\createWGBGD.GIF" />
+    <Content Include="Rmes\Pub\Images\template\createWGJJD.GIF" />
+    <Content Include="Rmes\Pub\Images\template\createWTD.GIF" />
+    <Content Include="Rmes\Pub\Images\template\createXPTZD.GIF" />
+    <Content Include="Rmes\Pub\Images\template\del.GIF" />
+    <Content Include="Rmes\Pub\Images\template\DevicePQuery.GIF" />
+    <Content Include="Rmes\Pub\Images\template\editColor.gif" />
+    <Content Include="Rmes\Pub\Images\template\editModal.gif" />
+    <Content Include="Rmes\Pub\Images\template\edit_plan.gif" />
+    <Content Include="Rmes\Pub\Images\template\exec.gif" />
+    <Content Include="Rmes\Pub\Images\template\favorite1.png" />
+    <Content Include="Rmes\Pub\Images\template\finish.GIF" />
+    <Content Include="Rmes\Pub\Images\template\foot_bg.gif" />
+    <Content Include="Rmes\Pub\Images\template\GiveUp.gif" />
+    <Content Include="Rmes\Pub\Images\template\help.jpg" />
+    <Content Include="Rmes\Pub\Images\template\help.png" />
+    <Content Include="Rmes\Pub\Images\template\HisPlanQuery.GIF" />
+    <Content Include="Rmes\Pub\Images\template\HotPlanQuery.GIF" />
+    <Content Include="Rmes\Pub\Images\template\leadout.jpg" />
+    <Content Include="Rmes\Pub\Images\template\logo.gif" />
+    <Content Include="Rmes\Pub\Images\template\logout.jpg" />
+    <Content Include="Rmes\Pub\Images\template\matConfirm.GIF" />
+    <Content Include="Rmes\Pub\Images\template\menu_bg3.gif" />
+    <Content Include="Rmes\Pub\Images\template\menu_bg4.gif" />
+    <Content Include="Rmes\Pub\Images\template\menu_bg5.gif" />
+    <Content Include="Rmes\Pub\Images\template\menu_bg6.gif" />
+    <Content Include="Rmes\Pub\Images\template\menu_bg_c1.gif" />
+    <Content Include="Rmes\Pub\Images\template\menu_bg_l1.gif" />
+    <Content Include="Rmes\Pub\Images\template\menu_bg_r1.gif" />
+    <Content Include="Rmes\Pub\Images\template\mod.GIF" />
+    <Content Include="Rmes\Pub\Images\template\modFathPlan.gif" />
+    <Content Include="Rmes\Pub\Images\template\ModPlanSeq.GIF" />
+    <Content Include="Rmes\Pub\Images\template\modSonPlan.gif" />
+    <Content Include="Rmes\Pub\Images\template\out1.png" />
+    <Content Include="Rmes\Pub\Images\template\planConfirm.gif" />
+    <Content Include="Rmes\Pub\Images\template\planExcute.GIF" />
+    <Content Include="Rmes\Pub\Images\template\planIn.GIF" />
+    <Content Include="Rmes\Pub\Images\template\planStop.GIF" />
+    <Content Include="Rmes\Pub\Images\template\plan_eqip.gif" />
+    <Content Include="Rmes\Pub\Images\template\print.jpg" />
+    <Content Include="Rmes\Pub\Images\template\Receive.GIF" />
+    <Content Include="Rmes\Pub\Images\template\Refuse.gif" />
+    <Content Include="Rmes\Pub\Images\template\relogin.jpg" />
+    <Content Include="Rmes\Pub\Images\template\report.jpg" />
+    <Content Include="Rmes\Pub\Images\template\report1.jpg" />
+    <Content Include="Rmes\Pub\Images\template\send.GIF" />
+    <Content Include="Rmes\Pub\Images\template\ssd2102.png" />
+    <Content Include="Rmes\Pub\Images\template\techConfirm.GIF" />
+    <Content Include="Rmes\Pub\Images\template\Untitled-5.ico" />
+    <Content Include="Rmes\Pub\Images\template\upload.gif" />
+    <Content Include="Rmes\Pub\Images\template\ViewDeviceStatus.GIF" />
+    <Content Include="Rmes\Pub\Images\template\ViewDraw.GIF" />
+    <Content Include="Rmes\Pub\Images\template\ViewManuPro.GIF" />
+    <Content Include="Rmes\Pub\Images\template\ViewPlan.GIF" />
+    <Content Include="Rmes\Pub\Images\template\ViewQualityData.GIF" />
+    <Content Include="Rmes\Pub\Images\template\ViewTech.GIF" />
+    <Content Include="Rmes\Pub\Images\template\view_check.GIF" />
+    <Content Include="Rmes\Pub\Images\template\view_chn.GIF" />
+    <Content Include="Rmes\Pub\Images\template\Woaf01.jpg" />
+    <Content Include="Rmes\Pub\Images\template\Xenogenesis08.jpg" />
+    <Content Include="Rmes\Pub\Images\template\Xenogenesis11.jpg" />
+    <Content Include="Rmes\Pub\Images\unqualitied.gif" />
+    <Content Include="Rmes\Pub\Images\Up.png" />
+    <Content Include="Rmes\Pub\Images\view.gif" />
+    <Content Include="Rmes\Pub\Images\view1.gif" />
+    <Content Include="Rmes\Pub\Images\waster.gif" />
+    <Content Include="Rmes\Pub\Images\xpblank.gif" />
+    <Content Include="Rmes\Pub\Images\yes.jpg" />
+    <Content Include="Rmes\Pub\Script\datePicker\calendar.js" />
+    <Content Include="Rmes\Pub\Script\datePicker\config.js" />
+    <Content Include="Rmes\Pub\Script\datePicker\lang\en.js" />
+    <Content Include="Rmes\Pub\Script\datePicker\lang\zh-cn.js" />
+    <Content Include="Rmes\Pub\Script\datePicker\lang\zh-tw.js" />
+    <Content Include="Rmes\Pub\Script\datePicker\My97DatePicker.htm" />
+    <Content Include="Rmes\Pub\Script\datePicker\readme.txt" />
+    <Content Include="Rmes\Pub\Script\datePicker\skin\datePicker.gif" />
+    <Content Include="Rmes\Pub\Script\datePicker\skin\default\datepicker.css" />
+    <Content Include="Rmes\Pub\Script\datePicker\skin\default\img.gif" />
+    <Content Include="Rmes\Pub\Script\datePicker\skin\WdatePicker.css" />
+    <Content Include="Rmes\Pub\Script\datePicker\skin\whyGreen\bg.jpg" />
+    <Content Include="Rmes\Pub\Script\datePicker\skin\whyGreen\datepicker.css" />
+    <Content Include="Rmes\Pub\Script\datePicker\skin\whyGreen\img.gif" />
+    <Content Include="Rmes\Pub\Script\datePicker\WdatePicker.js" />
+    <Content Include="Rmes\Pub\Script\jquery.min.js" />
+    <Content Include="Rmes\Pub\Script\jquery.superTable.js" />
+    <Content Include="Rmes\Pub\Script\RmesGlobal.js" />
+    <Content Include="Rmes\Pub\Script\superTables.js" />
+    <Content Include="Rmes\Pub\time.htm" />
+    <Content Include="Rmes\Pub\Xml\RmesConfig.xml" />
+    <Content Include="Rmes\Qms\qms1000\OperateAjax.aspx" />
+    <Content Include="Rmes\Qms\qms1000\qms1000.aspx" />
+    <Content Include="Rmes\Qms\qms1200\qms1200.aspx" />
+    <Content Include="Rmes\Qms\qms1300\qms1300.aspx" />
+    <Content Include="Rmes\Qms\qms2100\qms2100.aspx" />
+    <Content Include="Rmes\Qms\qms2200\qms2200.aspx" />
+    <Content Include="Rmes\Qms\qms2300\qms2300.aspx" />
+    <Content Include="Rmes\Qms\qms2300\qms2301.aspx" />
+    <Content Include="Rmes\Qms\qms3000\qms3000.aspx" />
+    <Content Include="Rmes\Qms\qms3100\qms3100.aspx" />
+    <Content Include="Rmes\Qms\qms3200\qms3200.aspx" />
+    <Content Include="Rmes\Qms\qms3300\qms3300.aspx" />
+    <Content Include="Rmes\Rept\rept1100\rept1100.aspx" />
+    <Content Include="Rmes\Rept\rept1200\rept1200.aspx" />
+    <Content Include="Rmes\Rept\rept1300\rept1300.aspx" />
+    <Content Include="Rmes\Rept\rept1400\rept1400.aspx" />
+    <Content Include="Rmes\Rept\rept1500\rept1500.aspx" />
+    <Content Include="Rmes\Rept\rept1600\rept1600.aspx" />
+    <Content Include="Rmes\Rept\rept1700\rept1700.aspx" />
+    <Content Include="Rmes\Rept\rept1800\rept1800.aspx" />
+    <Content Include="Rmes\Rept\rept1800\rept1800_pic.aspx" />
+    <Content Include="Rmes\Rept\rept1900\rept1900.aspx" />
+    <Content Include="Rmes\Rept\rept2100\rept2100.aspx" />
+    <Content Include="Rmes\Rept\rept2200\rept2200.aspx" />
+    <Content Include="Rmes\Rept\rept2300\rept2300.aspx" />
+    <Content Include="Rmes\Rept\rept2400\rept2400.aspx" />
+    <Content Include="Rmes\Rept\rept2500\rept2500.aspx" />
+    <Content Include="Rmes\Rept\rept2600\rept2600.aspx" />
+    <Content Include="Rmes\Rept\rept2700\rept2700.aspx" />
+    <Content Include="Rmes\Rept\rept2800\rept2800.aspx" />
+    <Content Include="Rmes\Rept\rept3100\rept3100.aspx" />
+    <Content Include="Rmes\Rept\rept3200\rept3200.aspx" />
+    <Content Include="Rmes\Rept\rept3300\rept3300.aspx" />
+    <Content Include="Rmes\Rept\rept3400\rept3400.aspx" />
+    <Content Include="Rmes\Rept\rept3500\rept3500.aspx" />
+    <Content Include="Rmes\Rept\rept3600\rept3600.aspx" />
+    <Content Include="Rmes\Sam\sam1100\sam1100.aspx" />
+    <Content Include="Rmes\Sam\sam1200\sam1200.aspx" />
+    <Content Include="Rmes\Sam\sam1200\sam1201.aspx" />
+    <Content Include="Rmes\Sam\sam1300\sam1300.aspx" />
+    <Content Include="Rmes\Sam\sam1400\sam1400.aspx" />
+    <Content Include="Rmes\Sam\sam1500\sam1500.aspx" />
+    <Content Include="Rmes\Sam\sam2000\sam2000.aspx" />
+    <Content Include="Rmes\Sam\sam2000\sam2001.aspx" />
+    <Content Include="Rmes\Sam\sam2100\sam2100.aspx" />
+    <Content Include="Rmes\Sam\sam2200\sam2200.aspx" />
+    <Content Include="Rmes\Sam\sam2300\sam2300.aspx" />
+    <Content Include="Rmes\Sam\sam2400\sam2400.aspx" />
+    <Content Include="Rmes\Sam\sam2500\sam2500.aspx" />
+    <Content Include="Rmes\Sam\sam2600\sam2600.aspx" />
+    <Content Include="Rmes\Sam\sam2700\sam2700.aspx" />
+    <Content Include="Rmes\Sam\sam3100\sam3100.aspx" />
+    <Content Include="Rmes\Sam\sam3200\sam3200.aspx" />
+    <Content Include="Rmes\Sam\sam3300\sam3300.aspx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Base\BasePage.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="MasterPage.master.cs">
+      <DependentUpon>MasterPage.master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MasterPage.master.designer.cs">
+      <DependentUpon>MasterPage.master</DependentUpon>
+    </Compile>
+    <Compile Include="old\dataConn.cs" />
+    <Compile Include="old\loginManager.cs" />
+    <Compile Include="old\PubCs.cs" />
+    <Compile Include="old\PubJs.cs" />
+    <Compile Include="old\PubLogic.cs" />
+    <Compile Include="old\RmesHttpModule.cs" />
+    <Compile Include="old\RmesPageHandler.cs" />
+    <Compile Include="old\userManager.cs" />
+    <Compile Include="old\xmlOp.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="RmesLogin.aspx.cs">
+      <DependentUpon>RmesLogin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RmesLogin.aspx.designer.cs">
+      <DependentUpon>RmesLogin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Rmes\Atpu\atpu1100\atpu1100.aspx.cs">
+      <DependentUpon>atpu1100.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Rmes\Atpu\atpu1100\atpu1100.aspx.designer.cs">
+      <DependentUpon>atpu1100.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Rmes\Atpu\atpu1200\atpu1200.aspx.cs">
+      <DependentUpon>atpu1200.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Rmes\Atpu\atpu1200\atpu1200.aspx.designer.cs">
+      <DependentUpon>atpu1200.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Rmes\Atpu\atpu1200\atpu1201.aspx.cs">
+      <DependentUpon>atpu1201.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Rmes\Atpu\atpu1200\atpu1201.aspx.designer.cs">
+      <DependentUpon>atpu1201.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Rmes\Atpu\atpu1300\atpu1300.aspx.cs">
+      <DependentUpon>atpu1300.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Rmes\Atpu\atpu1300\atpu1300.aspx.designer.cs">
+      <DependentUpon>atpu1300.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Rmes\Atpu\atpu1400\atpu1400.aspx.cs">
+      <DependentUpon>atpu1400.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Rmes\Atpu\atpu1400\atpu1400.aspx.designer.cs">
+      <DependentUpon>atpu1400.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Rmes\Atpu\atpu1500\atpu1500.aspx.cs">
+      <DependentUpon>atpu1500.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Rmes\Atpu\atpu1500\atpu1500.aspx.designer.cs">
+      <DependentUpon>atpu1500.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Rmes\Atpu\atpu1600\atpu1600.aspx.cs">
+      <DependentUpon>atpu1600.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Rmes\Atpu\atpu1600\atpu1600.aspx.designer.cs">
+      <DependentUpon>atpu1600.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Rmes\Atpu\atpu1700\atpu1700.aspx.cs">
+      <DependentUpon>atpu1700.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Rmes\Atpu\atpu1700\atpu1700.aspx.designer.cs">
+      <DependentUpon>atpu1700.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Rmes\Atpu\atpu1800\atpu1800.aspx.cs">
+      <DependentUpon>atpu1800.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Rmes\Atpu\atpu1800\atpu1800.aspx.designer.cs">
+      <DependentUpon>atpu1800.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Rmes\Atpu\atpu1900\atpu1900.aspx.cs">
+      <DependentUpon>atpu1900.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Rmes\Atpu\atpu1900\atpu1900.aspx.designer.cs">
+      <DependentUpon>atpu1900.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Rmes\Atpu\atpu1A00\atpu1A00.aspx.cs">
+      <DependentUpon>atpu1A00.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Rmes\Atpu\atpu1A00\atpu1A00.aspx.designer.cs">
+      <DependentUpon>atpu1A00.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Rmes\Atpu\atpu1B00\atpu1B00.aspx.cs">
+      <DependentUpon>atpu1B00.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Rmes\Atpu\atpu1B00\atpu1B00.aspx.designer.cs">
+      <DependentUpon>atpu1B00.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Rmes\Atpu\atpu1C00\atpu1C00.aspx.cs">
+      <DependentUpon>atpu1C00.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Rmes\Atpu\atpu1C00\atpu1C00.aspx.designer.cs">
+      <DependentUpon>atpu1C00.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Rmes\Atpu\atpu1D00\atpu1D00.aspx.cs">
+      <DependentUpon>atpu1D00.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Rmes\Atpu\atpu1D00\atpu1D00.aspx.designer.cs">
+      <DependentUpon>atpu1D00.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Rmes\Atpu\atpu1E00\atpu1E00.aspx.cs">
+      <DependentUpon>atpu1E00.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Rmes\Atpu\atpu1E00\atpu1E00.aspx.designer.cs">
+      <DependentUpon>atpu1E00.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Rmes\Atpu\atpu1E00\atpu1E01.aspx.cs">
+      <DependentUpon>atpu1E01.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Rmes\Atpu\atpu1E00\atpu1E01.aspx.designer.cs">
+      <DependentUpon>atpu1E01.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Rmes\Atpu\atpu2000\atpu2000.aspx.cs">
+      <DependentUpon>atpu2000.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Rmes\Atpu\atpu2000\atpu2000.aspx.designer.cs">
+      <DependentUpon>atpu2000.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Rmes\Atpu\atpu2100\atpu2100.aspx.cs">
+      <DependentUpon>atpu2100.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Rmes\Atpu\atpu2100\atpu2100.aspx.designer.cs">
+      <DependentUpon>atpu2100.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Rmes\Atpu\atpu2200\atpu2200.aspx.cs">
+      <DependentUpon>atpu2200.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Rmes\Atpu\atpu2200\atpu2200.aspx.designer.cs">
+      <DependentUpon>atpu2200.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Rmes\Atpu\atpu2300\atpu2300.aspx.cs">
+      <DependentUpon>atpu2300.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Rmes\Atpu\atpu2300\atpu2300.aspx.designer.cs">
+      <DependentUpon>atpu2300.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Rmes\Atpu\atpu2400\atpu2400.aspx.cs">
+      <DependentUpon>atpu2400.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Rmes\Atpu\atpu2400\atpu2400.aspx.designer.cs">
+      <DependentUpon>atpu2400.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Rmes\Atpu\atpu2500\atpu2500.aspx.cs">
+      <DependentUpon>atpu2500.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Rmes\Atpu\atpu2500\atpu2500.aspx.designer.cs">
+      <DependentUpon>atpu2500.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Rmes\Atpu\atpu2600\atpu2600.aspx.cs">
+      <DependentUpon>atpu2600.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Rmes\Atpu\atpu2600\atpu2600.aspx.designer.cs">
+      <DependentUpon>atpu2600.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Rmes\Atpu\atpu2700\atpu2700.aspx.cs">
+      <DependentUpon>atpu2700.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Rmes\Atpu\atpu2700\atpu2700.aspx.designer.cs">
+      <DependentUpon>atpu2700.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Rmes\Atpu\atpu2800\atpu2800.aspx.cs">
+      <DependentUpon>atpu2800.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Rmes\Atpu\atpu2800\atpu2800.aspx.designer.cs">
+      <DependentUpon>atpu2800.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Rmes\Atpu\atpu2900\atpu2900.aspx.cs">
+      <DependentUpon>atpu2900.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Rmes\Atpu\atpu2900\atpu2900.aspx.designer.cs">
+      <DependentUpon>atpu2900.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Rmes\Ems\ems1100\ems1100.aspx.cs">
+      <DependentUpon>ems1100.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Rmes\Ems\ems1100\ems1100.aspx.designer.cs">
+      <DependentUpon>ems1100.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Rmes\Ems\ems1200\ems1200.aspx.cs">
+      <DependentUpon>ems1200.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Rmes\Ems\ems1200\ems1200.aspx.designer.cs">
+      <DependentUpon>ems1200.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Rmes\Ems\ems2100\ems2100.aspx.cs">
+      <DependentUpon>ems2100.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Rmes\Ems\ems2100\ems2100.aspx.designer.cs">
+      <DependentUpon>ems2100.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Rmes\Ems\ems2200\ems2200.aspx.cs">
+      <DependentUpon>ems2200.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Rmes\Ems\ems2200\ems2200.aspx.designer.cs">
+      <DependentUpon>ems2200.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Rmes\EpdDcec\epdProcessNote\epdPic.aspx.cs">
+      <DependentUpon>epdPic.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Rmes\EpdDcec\epdProcessNote\epdPic.aspx.designer.cs">
+      <DependentUpon>epdPic.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Rmes\EpdDcec\epdProcessNote\epdProcessNote.aspx.cs">
+      <DependentUpon>epdProcessNote.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Rmes\EpdDcec\epdProcessNote\epdProcessNote.aspx.designer.cs">
+      <DependentUpon>epdProcessNote.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Rmes\EpdDcec\epdProcessNote\epdProcessNoteNew.aspx.cs">
+      <DependentUpon>epdProcessNoteNew.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Rmes\EpdDcec\epdProcessNote\epdProcessNoteNew.aspx.designer.cs">
+      <DependentUpon>epdProcessNoteNew.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Rmes\EpdDcec\epdProcessNote\epdProcessNoteQry.aspx.cs">
+      <DependentUpon>epdProcessNoteQry.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Rmes\EpdDcec\epdProcessNote\epdProcessNoteQry.aspx.designer.cs">
+      <DependentUpon>epdProcessNoteQry.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Rmes\EpdDcec\epdQualityAlert\epdQualityAlert.aspx.cs">
+      <DependentUpon>epdQualityAlert.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Rmes\EpdDcec\epdQualityAlert\epdQualityAlert.aspx.designer.cs">
+      <DependentUpon>epdQualityAlert.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Rmes\EpdDcec\epdQualityAlert\epdQualityAlertNew.aspx.cs">
+      <DependentUpon>epdQualityAlertNew.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Rmes\EpdDcec\epdQualityAlert\epdQualityAlertNew.aspx.designer.cs">
+      <DependentUpon>epdQualityAlertNew.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Rmes\EpdDcec\epdQualityQA\epdQualityQA.aspx.cs">
+      <DependentUpon>epdQualityQA.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Rmes\EpdDcec\epdQualityQA\epdQualityQA.aspx.designer.cs">
+      <DependentUpon>epdQualityQA.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Rmes\EpdDcec\epdQualityQA\epdQualityQANew.aspx.cs">
+      <DependentUpon>epdQualityQANew.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Rmes\EpdDcec\epdQualityQA\epdQualityQANew.aspx.designer.cs">
+      <DependentUpon>epdQualityQANew.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Rmes\EpdDcec\test\test.aspx.cs">
+      <DependentUpon>test.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Rmes\EpdDcec\test\test.aspx.designer.cs">
+      <DependentUpon>test.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Rmes\Epd\epd1100\epd1100.aspx.cs">
+      <DependentUpon>epd1100.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Rmes\Epd\epd1100\epd1100.aspx.designer.cs">
+      <DependentUpon>epd1100.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Rmes\Epd\epd1200\epd1200.aspx.cs">
+      <DependentUpon>epd1200.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Rmes\Epd\epd1200\epd1200.aspx.designer.cs">
+      <DependentUpon>epd1200.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Rmes\Epd\epd1400\epd1400.aspx.cs">
+      <DependentUpon>epd1400.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Rmes\Epd\epd1400\epd1400.aspx.designer.cs">
+      <DependentUpon>epd1400.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Rmes\Epd\epd1500\epd1500.aspx.cs">
+      <DependentUpon>epd1500.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Rmes\Epd\epd1500\epd1500.aspx.designer.cs">
+      <DependentUpon>epd1500.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Rmes\Epd\epd1600\epd1600.aspx.cs">
+      <DependentUpon>epd1600.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Rmes\Epd\epd1600\epd1600.aspx.designer.cs">
+      <DependentUpon>epd1600.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Rmes\Epd\epd1700\epd1700.aspx.cs">
+      <DependentUpon>epd1700.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Rmes\Epd\epd1700\epd1700.aspx.designer.cs">
+      <DependentUpon>epd1700.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Rmes\Epd\epd1800\epd1800.aspx.cs">
+      <DependentUpon>epd1800.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Rmes\Epd\epd1800\epd1800.aspx.designer.cs">
+      <DependentUpon>epd1800.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Rmes\Epd\epd1900\epd1900.aspx.cs">
+      <DependentUpon>epd1900.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Rmes\Epd\epd1900\epd1900.aspx.designer.cs">
+      <DependentUpon>epd1900.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Rmes\Epd\epd1900\epd1901.aspx.cs">
+      <DependentUpon>epd1901.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Rmes\Epd\epd1900\epd1901.aspx.designer.cs">
+      <DependentUpon>epd1901.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Rmes\Epd\epd1A00\epd1A00.aspx.cs">
+      <DependentUpon>epd1A00.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Rmes\Epd\epd1A00\epd1A00.aspx.designer.cs">
+      <DependentUpon>epd1A00.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Rmes\Epd\epd1A00\epd1A001.aspx.cs">
+      <DependentUpon>epd1A001.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Rmes\Epd\epd1A00\epd1A001.aspx.designer.cs">
+      <DependentUpon>epd1A001.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Rmes\Epd\epd2000\epd2000.aspx.cs">
+      <DependentUpon>epd2000.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Rmes\Epd\epd2000\epd2000.aspx.designer.cs">
+      <DependentUpon>epd2000.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Rmes\Epd\epd2100\epd2100.aspx.cs">
+      <DependentUpon>epd2100.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Rmes\Epd\epd2100\epd2100.aspx.designer.cs">
+      <DependentUpon>epd2100.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Rmes\Epd\epd2200\epd2200.aspx.cs">
+      <DependentUpon>epd2200.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Rmes\Epd\epd2200\epd2200.aspx.designer.cs">
+      <DependentUpon>epd2200.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Rmes\Epd\epd2300\epd2300.aspx.cs">
+      <DependentUpon>epd2300.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Rmes\Epd\epd2300\epd2300.aspx.designer.cs">
+      <DependentUpon>epd2300.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Rmes\Epd\epd2700\epd2700.aspx.cs">
+      <DependentUpon>epd2700.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Rmes\Epd\epd2700\epd2700.aspx.designer.cs">
+      <DependentUpon>epd2700.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Rmes\Epd\epd2700\epd2701.aspx.cs">
+      <DependentUpon>epd2701.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Rmes\Epd\epd2700\epd2701.aspx.designer.cs">
+      <DependentUpon>epd2701.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Rmes\Epd\epd2900\epd2900.aspx.cs">
+      <DependentUpon>epd2900.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Rmes\Epd\epd2900\epd2900.aspx.designer.cs">
+      <DependentUpon>epd2900.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Rmes\Epd\epd3200\epd3200.aspx.cs">
+      <DependentUpon>epd3200.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Rmes\Epd\epd3200\epd3200.aspx.designer.cs">
+      <DependentUpon>epd3200.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Rmes\Epd\epd3300\epd3300.aspx.cs">
+      <DependentUpon>epd3300.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Rmes\Epd\epd3300\epd3300.aspx.designer.cs">
+      <DependentUpon>epd3300.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Rmes\Epd\epd3400\epd3400.aspx.cs">
+      <DependentUpon>epd3400.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Rmes\Epd\epd3400\epd3400.aspx.designer.cs">
+      <DependentUpon>epd3400.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Rmes\Epd\epd3400\epd3401.aspx.cs">
+      <DependentUpon>epd3401.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Rmes\Epd\epd3400\epd3401.aspx.designer.cs">
+      <DependentUpon>epd3401.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Rmes\Epd\epd3500\epd3500.aspx.cs">
+      <DependentUpon>epd3500.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Rmes\Epd\epd3500\epd3500.aspx.designer.cs">
+      <DependentUpon>epd3500.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Rmes\Epd\epd3600\epd3601.aspx.cs">
+      <DependentUpon>epd3601.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Rmes\Epd\epd3600\epd3601.aspx.designer.cs">
+      <DependentUpon>epd3601.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Rmes\Epd\epd3600\epd3600.aspx.cs">
+      <DependentUpon>epd3600.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Rmes\Epd\epd3600\epd3600.aspx.designer.cs">
+      <DependentUpon>epd3600.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Rmes\Epd\epd3700\epd3700.aspx.cs">
+      <DependentUpon>epd3700.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Rmes\Epd\epd3700\epd3700.aspx.designer.cs">
+      <DependentUpon>epd3700.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Rmes\Epd\epd3700\epd3701.aspx.cs">
+      <DependentUpon>epd3701.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Rmes\Epd\epd3700\epd3701.aspx.designer.cs">
+      <DependentUpon>epd3701.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Rmes\Epd\epd3800\epd3800.aspx.cs">
+      <DependentUpon>epd3800.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Rmes\Epd\epd3800\epd3800.aspx.designer.cs">
+      <DependentUpon>epd3800.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Rmes\Epd\epd3800\epd3801.aspx.cs">
+      <DependentUpon>epd3801.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Rmes\Epd\epd3800\epd3801.aspx.designer.cs">
+      <DependentUpon>epd3801.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Rmes\Epd\epd3900\epd3900.aspx.cs">
+      <DependentUpon>epd3900.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Rmes\Epd\epd3900\epd3900.aspx.designer.cs">
+      <DependentUpon>epd3900.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Rmes\Epd\epd3900\epd3901.aspx.cs">
+      <DependentUpon>epd3901.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Rmes\Epd\epd3900\epd3901.aspx.designer.cs">
+      <DependentUpon>epd3901.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Rmes\Epd\epd3A00\epd3A00.aspx.cs">
+      <DependentUpon>epd3A00.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Rmes\Epd\epd3A00\epd3A00.aspx.designer.cs">
+      <DependentUpon>epd3A00.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Rmes\Epd\epd3A00\epd3A01.aspx.cs">
+      <DependentUpon>epd3A01.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Rmes\Epd\epd3A00\epd3A01.aspx.designer.cs">
+      <DependentUpon>epd3A01.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Rmes\Epd\epd4100\epd4100.aspx.cs">
+      <DependentUpon>epd4100.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Rmes\Epd\epd4100\epd4100.aspx.designer.cs">
+      <DependentUpon>epd4100.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Rmes\Epd\epd4100\epd4101.aspx.cs">
+      <DependentUpon>epd4101.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Rmes\Epd\epd4100\epd4101.aspx.designer.cs">
+      <DependentUpon>epd4101.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Rmes\Epd\epd4200\epd4200.aspx.cs">
+      <DependentUpon>epd4200.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Rmes\Epd\epd4200\epd4200.aspx.designer.cs">
+      <DependentUpon>epd4200.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Rmes\Epd\epd4300\epd4300.aspx.cs">
+      <DependentUpon>epd4300.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Rmes\Epd\epd4300\epd4300.aspx.designer.cs">
+      <DependentUpon>epd4300.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Rmes\Epd\epd4300\epd4301.aspx.cs">
+      <DependentUpon>epd4301.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Rmes\Epd\epd4300\epd4301.aspx.designer.cs">
+      <DependentUpon>epd4301.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Rmes\Epd\epd4400\epd4400.aspx.cs">
+      <DependentUpon>epd4400.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Rmes\Epd\epd4400\epd4400.aspx.designer.cs">
+      <DependentUpon>epd4400.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Rmes\Epd\epd4500\epd4500.aspx.cs">
+      <DependentUpon>epd4500.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Rmes\Epd\epd4500\epd4500.aspx.designer.cs">
+      <DependentUpon>epd4500.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Rmes\Exception\DefaultException.aspx.cs">
+      <DependentUpon>DefaultException.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Rmes\Exception\DefaultException.aspx.designer.cs">
+      <DependentUpon>DefaultException.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Rmes\Exception\NoRightException.aspx.cs">
+      <DependentUpon>NoRightException.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Rmes\Exception\NoRightException.aspx.designer.cs">
+      <DependentUpon>NoRightException.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Rmes\Exp\Exp1000\Exp1000.aspx.cs">
+      <DependentUpon>Exp1000.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Rmes\Exp\Exp1000\Exp1000.aspx.designer.cs">
+      <DependentUpon>Exp1000.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Rmes\Exp\Exp1100\Exp1100.aspx.cs">
+      <DependentUpon>Exp1100.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Rmes\Exp\Exp1100\Exp1100.aspx.designer.cs">
+      <DependentUpon>Exp1100.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Rmes\Exp\Exp1200\Exp1200.aspx.cs">
+      <DependentUpon>Exp1200.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Rmes\Exp\Exp1200\Exp1200.aspx.designer.cs">
+      <DependentUpon>Exp1200.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Rmes\Exp\Exp1200\XtraReport3.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Rmes\Exp\Exp1200\XtraReport3.Designer.cs">
+      <DependentUpon>XtraReport3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Rmes\Exp\Exp1300\Exp1300.aspx.cs">
+      <DependentUpon>Exp1300.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Rmes\Exp\Exp1300\Exp1300.aspx.designer.cs">
+      <DependentUpon>Exp1300.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Rmes\Exp\Exp1300\XtraReport1.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Rmes\Exp\Exp1300\XtraReport1.Designer.cs">
+      <DependentUpon>XtraReport1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Rmes\Exp\Exp1400\Exp1400.aspx.cs">
+      <DependentUpon>Exp1400.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Rmes\Exp\Exp1400\Exp1400.aspx.designer.cs">
+      <DependentUpon>Exp1400.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Rmes\Exp\Exp1400\XtraReport2.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Rmes\Exp\Exp1400\XtraReport2.Designer.cs">
+      <DependentUpon>XtraReport2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Rmes\Exp\Exp1500\Exp1500.aspx.cs">
+      <DependentUpon>Exp1500.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Rmes\Exp\Exp1500\Exp1500.aspx.designer.cs">
+      <DependentUpon>Exp1500.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Rmes\Exp\Exp1500\XtraReport4.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Rmes\Exp\Exp1500\XtraReport4.Designer.cs">
+      <DependentUpon>XtraReport4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Rmes\Exp\Exp1600\Exp1600.aspx.cs">
+      <DependentUpon>Exp1600.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Rmes\Exp\Exp1600\Exp1600.aspx.designer.cs">
+      <DependentUpon>Exp1600.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Rmes\Exp\Exp1600\Report_Exp1600.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Rmes\Exp\Exp1600\Report_Exp1600.Designer.cs">
+      <DependentUpon>Report_Exp1600.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Rmes\Exp\Exp1700\Exp1700.aspx.cs">
+      <DependentUpon>Exp1700.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Rmes\Exp\Exp1700\Exp1700.aspx.designer.cs">
+      <DependentUpon>Exp1700.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Rmes\Exp\Exp1700\Report_Exp1700.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Rmes\Exp\Exp1700\Report_Exp1700.Designer.cs">
+      <DependentUpon>Report_Exp1700.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Rmes\Exp\Exp2000\Report_Exp2000.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Rmes\Exp\Exp2000\Exp2000.aspx.cs">
+      <DependentUpon>Exp2000.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Rmes\Exp\Exp2000\Exp2000.aspx.designer.cs">
+      <DependentUpon>Exp2000.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Rmes\Exp\Exp2000\Report_Exp2000_1.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Rmes\Exp\Exp2100\Exp2100.aspx.cs">
+      <DependentUpon>Exp2100.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Rmes\Exp\Exp2100\Exp2100.aspx.designer.cs">
+      <DependentUpon>Exp2100.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Rmes\Exp\Exp2100\Report_Exp2100.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Rmes\Exp\Exp2200\Exp2200.aspx.cs">
+      <DependentUpon>Exp2200.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Rmes\Exp\Exp2200\Exp2200.aspx.designer.cs">
+      <DependentUpon>Exp2200.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Rmes\Exp\Exp2200\Report_Exp2200.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Rmes\Exp\Exp2300\Exp2300.aspx.cs">
+      <DependentUpon>Exp2300.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Rmes\Exp\Exp2300\Exp2300.aspx.designer.cs">
+      <DependentUpon>Exp2300.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Rmes\Exp\Exp2300\Report_Exp2300.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Rmes\Exp\Exp2300\Report_Exp2300.Designer.cs">
+      <DependentUpon>Report_Exp2300.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Rmes\Exp\Exp2400\Exp2400.aspx.cs">
+      <DependentUpon>Exp2400.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Rmes\Exp\Exp2400\Exp2400.aspx.designer.cs">
+      <DependentUpon>Exp2400.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Rmes\Exp\Exp2400\Report_Exp2400.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Rmes\Exp\Exp2400\Report_Exp2400.Designer.cs">
+      <DependentUpon>Report_Exp2400.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Rmes\File\Class1.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Rmes\Interface\inf1000\inf1000.aspx.cs">
+      <DependentUpon>inf1000.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Rmes\Interface\inf1000\inf1000.aspx.designer.cs">
+      <DependentUpon>inf1000.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Rmes\Interface\inf2000\inf2000.aspx.cs">
+      <DependentUpon>inf2000.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Rmes\Interface\inf2000\inf2000.aspx.designer.cs">
+      <DependentUpon>inf2000.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Rmes\Interface\inf2100\inf2100.aspx.cs">
+      <DependentUpon>inf2100.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Rmes\Interface\inf2100\inf2100.aspx.designer.cs">
+      <DependentUpon>inf2100.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Rmes\Interface\inf2200\inf2200.aspx.cs">
+      <DependentUpon>inf2200.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Rmes\Interface\inf2200\inf2200.aspx.designer.cs">
+      <DependentUpon>inf2200.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Rmes\Interface\inf2300\inf2300.aspx.cs">
+      <DependentUpon>inf2300.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Rmes\Interface\inf2300\inf2300.aspx.designer.cs">
+      <DependentUpon>inf2300.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Rmes\Interface\inf2400\inf2400.aspx.cs">
+      <DependentUpon>inf2400.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Rmes\Interface\inf2400\inf2400.aspx.designer.cs">
+      <DependentUpon>inf2400.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Rmes\Interface\inf3000\inf3000.aspx.cs">
+      <DependentUpon>inf3000.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Rmes\Interface\inf3000\inf3000.aspx.designer.cs">
+      <DependentUpon>inf3000.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Rmes\Interface\inf3100\inf3100.aspx.cs">
+      <DependentUpon>inf3100.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Rmes\Interface\inf3100\inf3100.aspx.designer.cs">
+      <DependentUpon>inf3100.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Rmes\Interface\inf3200\inf3200.aspx.cs">
+      <DependentUpon>inf3200.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Rmes\Interface\inf3200\inf3200.aspx.designer.cs">
+      <DependentUpon>inf3200.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Rmes\Interface\inf3300\inf3300.aspx.cs">
+      <DependentUpon>inf3300.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Rmes\Interface\inf3300\inf3300.aspx.designer.cs">
+      <DependentUpon>inf3300.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Rmes\Inv\inv1100\inv1100.aspx.cs">
+      <DependentUpon>inv1100.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Rmes\Inv\inv1100\inv1100.aspx.designer.cs">
+      <DependentUpon>inv1100.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Rmes\Inv\inv1200\inv1200.aspx.cs">
+      <DependentUpon>inv1200.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Rmes\Inv\inv1200\inv1200.aspx.designer.cs">
+      <DependentUpon>inv1200.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Rmes\Inv\inv2100\inv2100.aspx.cs">
+      <DependentUpon>inv2100.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Rmes\Inv\inv2100\inv2100.aspx.designer.cs">
+      <DependentUpon>inv2100.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Rmes\Inv\inv2100\inv2101.aspx.cs">
+      <DependentUpon>inv2101.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Rmes\Inv\inv2100\inv2101.aspx.designer.cs">
+      <DependentUpon>inv2101.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Rmes\Inv\inv2200\inv2200.aspx.cs">
+      <DependentUpon>inv2200.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Rmes\Inv\inv2200\inv2200.aspx.designer.cs">
+      <DependentUpon>inv2200.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Rmes\Inv\inv2300\inv2300.aspx.cs">
+      <DependentUpon>inv2300.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Rmes\Inv\inv2300\inv2300.aspx.designer.cs">
+      <DependentUpon>inv2300.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Rmes\Inv\inv2400\inv2400.aspx.cs">
+      <DependentUpon>inv2400.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Rmes\Inv\inv2400\inv2400.aspx.designer.cs">
+      <DependentUpon>inv2400.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Rmes\Inv\inv2500\inv2500.aspx.cs">
+      <DependentUpon>inv2500.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Rmes\Inv\inv2500\inv2500.aspx.designer.cs">
+      <DependentUpon>inv2500.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Rmes\Inv\inv2600\inv2600.aspx.cs">
+      <DependentUpon>inv2600.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Rmes\Inv\inv2600\inv2600.aspx.designer.cs">
+      <DependentUpon>inv2600.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Rmes\Inv\inv3100\inv3100.aspx.cs">
+      <DependentUpon>inv3100.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Rmes\Inv\inv3100\inv3100.aspx.designer.cs">
+      <DependentUpon>inv3100.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Rmes\Inv\inv3200\inv3200.aspx.cs">
+      <DependentUpon>inv3200.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Rmes\Inv\inv3200\inv3200.aspx.designer.cs">
+      <DependentUpon>inv3200.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Rmes\Inv\inv8000\inv8000.aspx.cs">
+      <DependentUpon>inv8000.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Rmes\Inv\inv8000\inv8000.aspx.designer.cs">
+      <DependentUpon>inv8000.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Rmes\Inv\inv8100\inv8100.aspx.cs">
+      <DependentUpon>inv8100.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Rmes\Inv\inv8100\inv8100.aspx.designer.cs">
+      <DependentUpon>inv8100.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Rmes\Inv\inv8600\inv8600.aspx.cs">
+      <DependentUpon>inv8600.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Rmes\Inv\inv8600\inv8600.aspx.designer.cs">
+      <DependentUpon>inv8600.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Rmes\Inv\inv8700\inv8700.aspx.cs">
+      <DependentUpon>inv8700.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Rmes\Inv\inv8700\inv8700.aspx.designer.cs">
+      <DependentUpon>inv8700.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Rmes\Inv\inv8800\inv8800.aspx.cs">
+      <DependentUpon>inv8800.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Rmes\Inv\inv8800\inv8800.aspx.designer.cs">
+      <DependentUpon>inv8800.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Rmes\Inv\inv8900\inv8900.aspx.cs">
+      <DependentUpon>inv8900.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Rmes\Inv\inv8900\inv8900.aspx.designer.cs">
+      <DependentUpon>inv8900.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Rmes\Inv\inv9000\inv9100.aspx.cs">
+      <DependentUpon>inv9100.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Rmes\Inv\inv9000\inv9100.aspx.designer.cs">
+      <DependentUpon>inv9100.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Rmes\Inv\inv9000\inv9200.aspx.cs">
+      <DependentUpon>inv9200.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Rmes\Inv\inv9000\inv9200.aspx.designer.cs">
+      <DependentUpon>inv9200.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Rmes\Inv\inv9100\inv9100.aspx.cs">
+      <DependentUpon>inv9100.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Rmes\Inv\inv9100\inv9100.aspx.designer.cs">
+      <DependentUpon>inv9100.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Rmes\Inv\inv9200\inv9200.aspx.cs">
+      <DependentUpon>inv9200.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Rmes\Inv\inv9200\inv9200.aspx.designer.cs">
+      <DependentUpon>inv9200.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Rmes\Inv\inv9300\inv9300.aspx.cs">
+      <DependentUpon>inv9300.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Rmes\Inv\inv9300\inv9300.aspx.designer.cs">
+      <DependentUpon>inv9300.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Rmes\Inv\inv9400\inv9400.aspx.cs">
+      <DependentUpon>inv9400.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Rmes\Inv\inv9400\inv9400.aspx.designer.cs">
+      <DependentUpon>inv9400.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Rmes\Inv\inv9500\inv9500.aspx.cs">
+      <DependentUpon>inv9500.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Rmes\Inv\inv9500\inv9500.aspx.designer.cs">
+      <DependentUpon>inv9500.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Rmes\Inv\inv9600\inv9600.aspx.cs">
+      <DependentUpon>inv9600.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Rmes\Inv\inv9600\inv9600.aspx.designer.cs">
+      <DependentUpon>inv9600.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Rmes\Inv\inv9700\inv9700.aspx.cs">
+      <DependentUpon>inv9700.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Rmes\Inv\inv9700\inv9700.aspx.designer.cs">
+      <DependentUpon>inv9700.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Rmes\Inv\inv9800\inv9800.aspx.cs">
+      <DependentUpon>inv9800.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Rmes\Inv\inv9800\inv9800.aspx.designer.cs">
+      <DependentUpon>inv9800.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Rmes\Inv\inv9900\inv9900.aspx.cs">
+      <DependentUpon>inv9900.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Rmes\Inv\inv9900\inv9900.aspx.designer.cs">
+      <DependentUpon>inv9900.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Rmes\Login\blank.aspx.cs">
+      <DependentUpon>blank.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Rmes\Login\blank.aspx.designer.cs">
+      <DependentUpon>blank.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Rmes\Login\relogin.aspx.cs">
+      <DependentUpon>relogin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Rmes\Login\relogin.aspx.designer.cs">
+      <DependentUpon>relogin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Rmes\Login\RmesDefaultPage.aspx.cs">
+      <DependentUpon>RmesDefaultPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Rmes\Login\RmesDefaultPage.aspx.designer.cs">
+      <DependentUpon>RmesDefaultPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Rmes\Login\RmesIndex.aspx.cs">
+      <DependentUpon>RmesIndex.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Rmes\Login\RmesIndex.aspx.designer.cs">
+      <DependentUpon>RmesIndex.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Rmes\Login\RmesLogout.aspx.cs">
+      <DependentUpon>RmesLogout.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Rmes\Login\RmesLogout.aspx.designer.cs">
+      <DependentUpon>RmesLogout.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Rmes\Login\RmesReLogin.aspx.cs">
+      <DependentUpon>RmesReLogin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Rmes\Login\RmesReLogin.aspx.designer.cs">
+      <DependentUpon>RmesReLogin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Rmes\MmsDcec\mmsMaterialMove\mmsMaterialMove.aspx.cs">
+      <DependentUpon>mmsMaterialMove.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Rmes\MmsDcec\mmsMaterialMove\mmsMaterialMove.aspx.designer.cs">
+      <DependentUpon>mmsMaterialMove.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Rmes\MmsDcec\mmsMaterialMove\mmsMaterialMoveGZ.aspx.cs">
+      <DependentUpon>mmsMaterialMoveGZ.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Rmes\MmsDcec\mmsMaterialMove\mmsMaterialMoveGZ.aspx.designer.cs">
+      <DependentUpon>mmsMaterialMoveGZ.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Rmes\MmsDcec\mmsMaterialMove\mmsMaterialMoveLineside.aspx.cs">
+      <DependentUpon>mmsMaterialMoveLineside.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Rmes\MmsDcec\mmsMaterialMove\mmsMaterialMoveLineside.aspx.designer.cs">
+      <DependentUpon>mmsMaterialMoveLineside.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Rmes\MmsDcec\mmsMaterialMove\mmsMaterialMoveLQ.aspx.cs">
+      <DependentUpon>mmsMaterialMoveLQ.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Rmes\MmsDcec\mmsMaterialMove\mmsMaterialMoveLQ.aspx.designer.cs">
+      <DependentUpon>mmsMaterialMoveLQ.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Rmes\MmsDcec\mmsMaterialRequisition\mmsMaterialRequisition.aspx.cs">
+      <DependentUpon>mmsMaterialRequisition.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Rmes\MmsDcec\mmsMaterialRequisition\mmsMaterialRequisition.aspx.designer.cs">
+      <DependentUpon>mmsMaterialRequisition.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Rmes\MmsDcec\mmsMaterialRequisition\mmsMaterialRequisitionDetail.aspx.cs">
+      <DependentUpon>mmsMaterialRequisitionDetail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Rmes\MmsDcec\mmsMaterialRequisition\mmsMaterialRequisitionDetail.aspx.designer.cs">
+      <DependentUpon>mmsMaterialRequisitionDetail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Rmes\MmsDcec\mmsMaterialRequisition\mmsMaterialRequisitionGZ.aspx.cs">
+      <DependentUpon>mmsMaterialRequisitionGZ.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Rmes\MmsDcec\mmsMaterialRequisition\mmsMaterialRequisitionGZ.aspx.designer.cs">
+      <DependentUpon>mmsMaterialRequisitionGZ.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Rmes\MmsDcec\mmsMaterialRequisition\mmsMaterialRequisitionLQ.aspx.cs">
+      <DependentUpon>mmsMaterialRequisitionLQ.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Rmes\MmsDcec\mmsMaterialRequisition\mmsMaterialRequisitionLQ.aspx.designer.cs">
+      <DependentUpon>mmsMaterialRequisitionLQ.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Rmes\MmsDcec\mmsMaterialRequisition\mmsMaterialRequisitionQry.aspx.cs">
+      <DependentUpon>mmsMaterialRequisitionQry.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Rmes\MmsDcec\mmsMaterialRequisition\mmsMaterialRequisitionQry.aspx.designer.cs">
+      <DependentUpon>mmsMaterialRequisitionQry.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Rmes\MmsDcec\mmsMaterialSend\mmsMaterialSend.aspx.cs">
+      <DependentUpon>mmsMaterialSend.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Rmes\MmsDcec\mmsMaterialSend\mmsMaterialSend.aspx.designer.cs">
+      <DependentUpon>mmsMaterialSend.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Rmes\MmsDcec\mmsProductConfirm\mmsMultiReplaceDelProductConfirm.aspx.cs">
+      <DependentUpon>mmsMultiReplaceDelProductConfirm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Rmes\MmsDcec\mmsProductConfirm\mmsMultiReplaceDelProductConfirm.aspx.designer.cs">
+      <DependentUpon>mmsMultiReplaceDelProductConfirm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Rmes\MmsDcec\mmsProductConfirm\mmsMultiReplaceProductConfirm.aspx.cs">
+      <DependentUpon>mmsMultiReplaceProductConfirm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Rmes\MmsDcec\mmsProductConfirm\mmsMultiReplaceProductConfirm.aspx.designer.cs">
+      <DependentUpon>mmsMultiReplaceProductConfirm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Rmes\MmsDcec\mmsProductConfirm\mmsOneReplaceDelProductConfirm.aspx.cs">
+      <DependentUpon>mmsOneReplaceDelProductConfirm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Rmes\MmsDcec\mmsProductConfirm\mmsOneReplaceDelProductConfirm.aspx.designer.cs">
+      <DependentUpon>mmsOneReplaceDelProductConfirm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Rmes\MmsDcec\mmsProductConfirm\mmsOneReplaceProductConfirm.aspx.cs">
+      <DependentUpon>mmsOneReplaceProductConfirm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Rmes\MmsDcec\mmsProductConfirm\mmsOneReplaceProductConfirm.aspx.designer.cs">
+      <DependentUpon>mmsOneReplaceProductConfirm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Rmes\MmsDcec\mmsReplaceRelationshipQry\mmsReplaceRelationshipQry.aspx.cs">
+      <DependentUpon>mmsReplaceRelationshipQry.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Rmes\MmsDcec\mmsReplaceRelationshipQry\mmsReplaceRelationshipQry.aspx.designer.cs">
+      <DependentUpon>mmsReplaceRelationshipQry.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Rmes\MmsDcec\mmsReplaceRelationshipSet\mmsReplaceRelationshipCopy.aspx.cs">
+      <DependentUpon>mmsReplaceRelationshipCopy.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Rmes\MmsDcec\mmsReplaceRelationshipSet\mmsReplaceRelationshipCopy.aspx.designer.cs">
+      <DependentUpon>mmsReplaceRelationshipCopy.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Rmes\MmsDcec\mmsReplaceRelationshipSet\mmsReplaceRelationshipSet.aspx.cs">
+      <DependentUpon>mmsReplaceRelationshipSet.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Rmes\MmsDcec\mmsReplaceRelationshipSet\mmsReplaceRelationshipSet.aspx.designer.cs">
+      <DependentUpon>mmsReplaceRelationshipSet.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Rmes\MmsDcec\mmsReplaceRelationshipSet\mmsReplaceRelationshipSetNew.aspx.cs">
+      <DependentUpon>mmsReplaceRelationshipSetNew.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Rmes\MmsDcec\mmsReplaceRelationshipSet\mmsReplaceRelationshipSetNew.aspx.designer.cs">
+      <DependentUpon>mmsReplaceRelationshipSetNew.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Rmes\MmsDcec\mmsReplaceRelationshipSet\mmsReplaceRelationshipSetQry.aspx.cs">
+      <DependentUpon>mmsReplaceRelationshipSetQry.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Rmes\MmsDcec\mmsReplaceRelationshipSet\mmsReplaceRelationshipSetQry.aspx.designer.cs">
+      <DependentUpon>mmsReplaceRelationshipSetQry.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Rmes\MmsDcec\mmsReplaceRelationshipUse\mmsConfimedMultiReplaceQuery.aspx.cs">
+      <DependentUpon>mmsConfimedMultiReplaceQuery.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Rmes\MmsDcec\mmsReplaceRelationshipUse\mmsConfimedMultiReplaceQuery.aspx.designer.cs">
+      <DependentUpon>mmsConfimedMultiReplaceQuery.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Rmes\MmsDcec\mmsReplaceRelationshipUse\mmsConfimedOneReplaceQuery.aspx.cs">
+      <DependentUpon>mmsConfimedOneReplaceQuery.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Rmes\MmsDcec\mmsReplaceRelationshipUse\mmsConfimedOneReplaceQuery.aspx.designer.cs">
+      <DependentUpon>mmsConfimedOneReplaceQuery.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Rmes\MmsDcec\mmsReplaceRelationshipUse\mmsConfirmMultiReplace.aspx.cs">
+      <DependentUpon>mmsConfirmMultiReplace.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Rmes\MmsDcec\mmsReplaceRelationshipUse\mmsConfirmMultiReplace.aspx.designer.cs">
+      <DependentUpon>mmsConfirmMultiReplace.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Rmes\MmsDcec\mmsReplaceRelationshipUse\mmsConfirmOneReplace.aspx.cs">
+      <DependentUpon>mmsConfirmOneReplace.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Rmes\MmsDcec\mmsReplaceRelationshipUse\mmsConfirmOneReplace.aspx.designer.cs">
+      <DependentUpon>mmsConfirmOneReplace.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Rmes\MmsDcec\mmsReplaceRelationshipUse\mmsMultiReplace.aspx.cs">
+      <DependentUpon>mmsMultiReplace.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Rmes\MmsDcec\mmsReplaceRelationshipUse\mmsMultiReplace.aspx.designer.cs">
+      <DependentUpon>mmsMultiReplace.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Rmes\MmsDcec\mmsReplaceRelationshipUse\mmsOneReplace.aspx.cs">
+      <DependentUpon>mmsOneReplace.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Rmes\MmsDcec\mmsReplaceRelationshipUse\mmsOneReplace.aspx.designer.cs">
+      <DependentUpon>mmsOneReplace.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Rmes\MmsDcec\mmsReplaceRelationshipUse\mmsReplaceRelationshipQry.aspx.cs">
+      <DependentUpon>mmsReplaceRelationshipQry.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Rmes\MmsDcec\mmsReplaceRelationshipUse\mmsReplaceRelationshipQry.aspx.designer.cs">
+      <DependentUpon>mmsReplaceRelationshipQry.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Rmes\MmsDcec\mmsReplaceRelationshipUse\mmsReplaceRelationshipUse.aspx.cs">
+      <DependentUpon>mmsReplaceRelationshipUse.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Rmes\MmsDcec\mmsReplaceRelationshipUse\mmsReplaceRelationshipUse.aspx.designer.cs">
+      <DependentUpon>mmsReplaceRelationshipUse.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Rmes\MmsDcec\mmsReplaceRelationshipUse\mmsReplaceReport.aspx.cs">
+      <DependentUpon>mmsReplaceReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Rmes\MmsDcec\mmsReplaceRelationshipUse\mmsReplaceReport.aspx.designer.cs">
+      <DependentUpon>mmsReplaceReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Rmes\MmsDcec\mmsReplaceRelationshipUse\mmsReplaceResultQry.aspx.cs">
+      <DependentUpon>mmsReplaceResultQry.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Rmes\MmsDcec\mmsReplaceRelationshipUse\mmsReplaceResultQry.aspx.designer.cs">
+      <DependentUpon>mmsReplaceResultQry.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Rmes\MmsDcec\mmsWarehouseConfirm\mmsMultiReplaceDelWhConfirm.aspx.cs">
+      <DependentUpon>mmsMultiReplaceDelWhConfirm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Rmes\MmsDcec\mmsWarehouseConfirm\mmsMultiReplaceDelWhConfirm.aspx.designer.cs">
+      <DependentUpon>mmsMultiReplaceDelWhConfirm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Rmes\MmsDcec\mmsWarehouseConfirm\mmsMultiReplaceWhConfirm.aspx.cs">
+      <DependentUpon>mmsMultiReplaceWhConfirm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Rmes\MmsDcec\mmsWarehouseConfirm\mmsMultiReplaceWhConfirm.aspx.designer.cs">
+      <DependentUpon>mmsMultiReplaceWhConfirm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Rmes\MmsDcec\mmsWarehouseConfirm\mmsOneReplaceDelWhConfirm.aspx.cs">
+      <DependentUpon>mmsOneReplaceDelWhConfirm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Rmes\MmsDcec\mmsWarehouseConfirm\mmsOneReplaceDelWhConfirm.aspx.designer.cs">
+      <DependentUpon>mmsOneReplaceDelWhConfirm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Rmes\MmsDcec\mmsWarehouseConfirm\mmsOneReplaceWhConfirm.aspx.cs">
+      <DependentUpon>mmsOneReplaceWhConfirm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Rmes\MmsDcec\mmsWarehouseConfirm\mmsOneReplaceWhConfirm.aspx.designer.cs">
+      <DependentUpon>mmsOneReplaceWhConfirm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Rmes\MmsDcec\mmsWarehouseConfirm\mmsWarehouseDelConfirmOne.aspx.cs">
+      <DependentUpon>mmsWarehouseDelConfirmOne.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Rmes\MmsDcec\mmsWarehouseConfirm\mmsWarehouseDelConfirmOne.aspx.designer.cs">
+      <DependentUpon>mmsWarehouseDelConfirmOne.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Rmes\Mms\mms1300\mms1300.aspx.cs">
+      <DependentUpon>mms1300.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Rmes\Mms\mms1300\mms1300.aspx.designer.cs">
+      <DependentUpon>mms1300.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Rmes\Mms\mms1300\mms1301.aspx.cs">
+      <DependentUpon>mms1301.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Rmes\Mms\mms1300\mms1301.aspx.designer.cs">
+      <DependentUpon>mms1301.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Rmes\Mms\mms1400\mms1400.aspx.cs">
+      <DependentUpon>mms1400.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Rmes\Mms\mms1400\mms1400.aspx.designer.cs">
+      <DependentUpon>mms1400.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Rmes\Mms\mms1400\mms1401.aspx.cs">
+      <DependentUpon>mms1401.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Rmes\Mms\mms1400\mms1401.aspx.designer.cs">
+      <DependentUpon>mms1401.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Rmes\Mms\mms1400\mms1402.aspx.cs">
+      <DependentUpon>mms1402.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Rmes\Mms\mms1400\mms1402.aspx.designer.cs">
+      <DependentUpon>mms1402.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Rmes\Mms\mms1400\mms1403.aspx.cs">
+      <DependentUpon>mms1403.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Rmes\Mms\mms1400\mms1403.aspx.designer.cs">
+      <DependentUpon>mms1403.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Rmes\Mms\mms1400\mms1404.aspx.cs">
+      <DependentUpon>mms1404.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Rmes\Mms\mms1400\mms1404.aspx.designer.cs">
+      <DependentUpon>mms1404.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Rmes\Part\part1100\part1100.aspx.cs">
+      <DependentUpon>part1100.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Rmes\Part\part1100\part1100.aspx.designer.cs">
+      <DependentUpon>part1100.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Rmes\Part\part1200\part1200.aspx.cs">
+      <DependentUpon>part1200.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Rmes\Part\part1200\part1200.aspx.designer.cs">
+      <DependentUpon>part1200.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Rmes\Part\part1300\part1300.aspx.cs">
+      <DependentUpon>part1300.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Rmes\Part\part1300\part1300.aspx.designer.cs">
+      <DependentUpon>part1300.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Rmes\Part\part1400\part1400.aspx.cs">
+      <DependentUpon>part1400.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Rmes\Part\part1400\part1400.aspx.designer.cs">
+      <DependentUpon>part1400.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Rmes\Part\part1500\part1500.aspx.cs">
+      <DependentUpon>part1500.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Rmes\Part\part1500\part1500.aspx.designer.cs">
+      <DependentUpon>part1500.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Rmes\Part\part1600\part1600.aspx.cs">
+      <DependentUpon>part1600.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Rmes\Part\part1600\part1600.aspx.designer.cs">
+      <DependentUpon>part1600.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Rmes\Part\part1700\part1700.aspx.cs">
+      <DependentUpon>part1700.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Rmes\Part\part1700\part1700.aspx.designer.cs">
+      <DependentUpon>part1700.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Rmes\Part\part1800\part1800.aspx.cs">
+      <DependentUpon>part1800.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Rmes\Part\part1800\part1800.aspx.designer.cs">
+      <DependentUpon>part1800.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Rmes\Part\part1900\part1900.aspx.cs">
+      <DependentUpon>part1900.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Rmes\Part\part1900\part1900.aspx.designer.cs">
+      <DependentUpon>part1900.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Rmes\Part\part2000\part2000.aspx.cs">
+      <DependentUpon>part2000.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Rmes\Part\part2000\part2000.aspx.designer.cs">
+      <DependentUpon>part2000.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Rmes\Part\part2100\part2100.aspx.cs">
+      <DependentUpon>part2100.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Rmes\Part\part2100\part2100.aspx.designer.cs">
+      <DependentUpon>part2100.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Rmes\Part\part2200\part2200.aspx.cs">
+      <DependentUpon>part2200.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Rmes\Part\part2200\part2200.aspx.designer.cs">
+      <DependentUpon>part2200.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Rmes\Part\part2300\part2300.aspx.cs">
+      <DependentUpon>part2300.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Rmes\Part\part2300\part2300.aspx.designer.cs">
+      <DependentUpon>part2300.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Rmes\Part\part2400\part2400.aspx.cs">
+      <DependentUpon>part2400.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Rmes\Part\part2400\part2400.aspx.designer.cs">
+      <DependentUpon>part2400.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Rmes\Part\part2500\part2500.aspx.cs">
+      <DependentUpon>part2500.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Rmes\Part\part2500\part2500.aspx.designer.cs">
+      <DependentUpon>part2500.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Rmes\Part\part2600\part2600.aspx.cs">
+      <DependentUpon>part2600.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Rmes\Part\part2600\part2600.aspx.designer.cs">
+      <DependentUpon>part2600.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Rmes\Part\part2700\part2700.aspx.cs">
+      <DependentUpon>part2700.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Rmes\Part\part2700\part2700.aspx.designer.cs">
+      <DependentUpon>part2700.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Rmes\Part\part2800\part2800.aspx.cs">
+      <DependentUpon>part2800.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Rmes\Part\part2800\part2800.aspx.designer.cs">
+      <DependentUpon>part2800.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Rmes\Part\part2900\part2900.aspx.cs">
+      <DependentUpon>part2900.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Rmes\Part\part2900\part2900.aspx.designer.cs">
+      <DependentUpon>part2900.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Rmes\Part\part2A00\part2A00.aspx.cs">
+      <DependentUpon>part2A00.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Rmes\Part\part2A00\part2A00.aspx.designer.cs">
+      <DependentUpon>part2A00.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Rmes\Part\part2B00\part2B00.aspx.cs">
+      <DependentUpon>part2B00.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Rmes\Part\part2B00\part2B00.aspx.designer.cs">
+      <DependentUpon>part2B00.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Rmes\Part\part2C00\part2C00.aspx.cs">
+      <DependentUpon>part2C00.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Rmes\Part\part2C00\part2C00.aspx.designer.cs">
+      <DependentUpon>part2C00.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Rmes\Part\part3100\part3100.aspx.cs">
+      <DependentUpon>part3100.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Rmes\Part\part3100\part3100.aspx.designer.cs">
+      <DependentUpon>part3100.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Rmes\Pub\Ascx\CalendarWidget.ascx.cs">
+      <DependentUpon>CalendarWidget.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Rmes\Pub\Ascx\CalendarWidget.ascx.designer.cs">
+      <DependentUpon>CalendarWidget.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Rmes\Pub\Ascx\DateTimeWidget.ascx.cs">
+      <DependentUpon>DateTimeWidget.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Rmes\Pub\Ascx\DateTimeWidget.ascx.designer.cs">
+      <DependentUpon>DateTimeWidget.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Rmes\Pub\CommonHandle\commonSign.aspx.cs">
+      <DependentUpon>commonSign.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Rmes\Pub\CommonHandle\commonSign.aspx.designer.cs">
+      <DependentUpon>commonSign.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Rmes\Pub\CommonHandle\commonSign_2.aspx.cs">
+      <DependentUpon>commonSign_2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Rmes\Pub\CommonHandle\commonSign_2.aspx.designer.cs">
+      <DependentUpon>commonSign_2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Rmes\Pub\CommonHandle\DrawFiles.aspx.cs">
+      <DependentUpon>DrawFiles.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Rmes\Pub\CommonHandle\DrawFiles.aspx.designer.cs">
+      <DependentUpon>DrawFiles.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Rmes\Pub\CommonHandle\openFile.aspx.cs">
+      <DependentUpon>openFile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Rmes\Pub\CommonHandle\openFile.aspx.designer.cs">
+      <DependentUpon>openFile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Rmes\Pub\CommonHandle\openFileTwo.aspx.cs">
+      <DependentUpon>openFileTwo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Rmes\Pub\CommonHandle\openFileTwo.aspx.designer.cs">
+      <DependentUpon>openFileTwo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Rmes\Pub\CommonQuery\CommonDisplay.aspx.cs">
+      <DependentUpon>CommonDisplay.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Rmes\Pub\CommonQuery\CommonDisplay.aspx.designer.cs">
+      <DependentUpon>CommonDisplay.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Rmes\Pub\CommonQuery\CommonQueryMore.aspx.cs">
+      <DependentUpon>CommonQueryMore.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Rmes\Pub\CommonQuery\CommonQueryMore.aspx.designer.cs">
+      <DependentUpon>CommonQueryMore.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Rmes\Pub\CommonQuery\CommonQuerySingle.aspx.cs">
+      <DependentUpon>CommonQuerySingle.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Rmes\Pub\CommonQuery\CommonQuerySingle.aspx.designer.cs">
+      <DependentUpon>CommonQuerySingle.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Rmes\Qms\qms1000\OperateAjax.aspx.cs">
+      <DependentUpon>OperateAjax.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Rmes\Qms\qms1000\OperateAjax.aspx.designer.cs">
+      <DependentUpon>OperateAjax.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Rmes\Qms\qms1000\qms1000.aspx.cs">
+      <DependentUpon>qms1000.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Rmes\Qms\qms1000\qms1000.aspx.designer.cs">
+      <DependentUpon>qms1000.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Rmes\Qms\qms1200\qms1200.aspx.cs">
+      <DependentUpon>qms1200.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Rmes\Qms\qms1200\qms1200.aspx.designer.cs">
+      <DependentUpon>qms1200.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Rmes\Qms\qms1300\qms1300.aspx.cs">
+      <DependentUpon>qms1300.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Rmes\Qms\qms1300\qms1300.aspx.designer.cs">
+      <DependentUpon>qms1300.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Rmes\Qms\qms2100\qms2100.aspx.cs">
+      <DependentUpon>qms2100.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Rmes\Qms\qms2100\qms2100.aspx.designer.cs">
+      <DependentUpon>qms2100.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Rmes\Qms\qms2200\qms2200.aspx.cs">
+      <DependentUpon>qms2200.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Rmes\Qms\qms2200\qms2200.aspx.designer.cs">
+      <DependentUpon>qms2200.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Rmes\Qms\qms2300\qms2300.aspx.cs">
+      <DependentUpon>qms2300.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Rmes\Qms\qms2300\qms2300.aspx.designer.cs">
+      <DependentUpon>qms2300.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Rmes\Qms\qms2300\qms2301.aspx.cs">
+      <DependentUpon>qms2301.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Rmes\Qms\qms2300\qms2301.aspx.designer.cs">
+      <DependentUpon>qms2301.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Rmes\Qms\qms3000\qms3000.aspx.cs">
+      <DependentUpon>qms3000.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Rmes\Qms\qms3000\qms3000.aspx.designer.cs">
+      <DependentUpon>qms3000.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Rmes\Qms\qms3100\qms3100.aspx.cs">
+      <DependentUpon>qms3100.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Rmes\Qms\qms3100\qms3100.aspx.designer.cs">
+      <DependentUpon>qms3100.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Rmes\Qms\qms3200\qms3200.aspx.cs">
+      <DependentUpon>qms3200.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Rmes\Qms\qms3200\qms3200.aspx.designer.cs">
+      <DependentUpon>qms3200.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Rmes\Qms\qms3300\qms3300.aspx.cs">
+      <DependentUpon>qms3300.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Rmes\Qms\qms3300\qms3300.aspx.designer.cs">
+      <DependentUpon>qms3300.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Rmes\Rept\rept1100\rept1100.aspx.cs">
+      <DependentUpon>rept1100.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Rmes\Rept\rept1100\rept1100.aspx.designer.cs">
+      <DependentUpon>rept1100.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Rmes\Rept\rept1200\rept1200.aspx.cs">
+      <DependentUpon>rept1200.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Rmes\Rept\rept1200\rept1200.aspx.designer.cs">
+      <DependentUpon>rept1200.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Rmes\Rept\rept1300\rept1300.aspx.cs">
+      <DependentUpon>rept1300.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Rmes\Rept\rept1300\rept1300.aspx.designer.cs">
+      <DependentUpon>rept1300.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Rmes\Rept\rept1400\rept1400.aspx.cs">
+      <DependentUpon>rept1400.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Rmes\Rept\rept1400\rept1400.aspx.designer.cs">
+      <DependentUpon>rept1400.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Rmes\Rept\rept1500\rept1500.aspx.cs">
+      <DependentUpon>rept1500.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Rmes\Rept\rept1500\rept1500.aspx.designer.cs">
+      <DependentUpon>rept1500.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Rmes\Rept\rept1600\rept1600.aspx.cs">
+      <DependentUpon>rept1600.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Rmes\Rept\rept1600\rept1600.aspx.designer.cs">
+      <DependentUpon>rept1600.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Rmes\Rept\rept1700\rept1700.aspx.cs">
+      <DependentUpon>rept1700.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Rmes\Rept\rept1700\rept1700.aspx.designer.cs">
+      <DependentUpon>rept1700.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Rmes\Rept\rept1800\rept1800.aspx.cs">
+      <DependentUpon>rept1800.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Rmes\Rept\rept1800\rept1800.aspx.designer.cs">
+      <DependentUpon>rept1800.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Rmes\Rept\rept1800\rept1800_pic.aspx.cs">
+      <DependentUpon>rept1800_pic.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Rmes\Rept\rept1800\rept1800_pic.aspx.designer.cs">
+      <DependentUpon>rept1800_pic.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Rmes\Rept\rept1900\rept1900.aspx.cs">
+      <DependentUpon>rept1900.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Rmes\Rept\rept1900\rept1900.aspx.designer.cs">
+      <DependentUpon>rept1900.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Rmes\Rept\rept2100\rept2100.aspx.cs">
+      <DependentUpon>rept2100.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Rmes\Rept\rept2100\rept2100.aspx.designer.cs">
+      <DependentUpon>rept2100.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Rmes\Rept\rept2200\rept2200.aspx.cs">
+      <DependentUpon>rept2200.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Rmes\Rept\rept2200\rept2200.aspx.designer.cs">
+      <DependentUpon>rept2200.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Rmes\Rept\rept2300\rept2300.aspx.cs">
+      <DependentUpon>rept2300.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Rmes\Rept\rept2300\rept2300.aspx.designer.cs">
+      <DependentUpon>rept2300.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Rmes\Rept\rept2400\rept2400.aspx.cs">
+      <DependentUpon>rept2400.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Rmes\Rept\rept2400\rept2400.aspx.designer.cs">
+      <DependentUpon>rept2400.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Rmes\Rept\rept2500\rept2500.aspx.cs">
+      <DependentUpon>rept2500.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Rmes\Rept\rept2500\rept2500.aspx.designer.cs">
+      <DependentUpon>rept2500.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Rmes\Rept\rept2600\rept2600.aspx.cs">
+      <DependentUpon>rept2600.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Rmes\Rept\rept2600\rept2600.aspx.designer.cs">
+      <DependentUpon>rept2600.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Rmes\Rept\rept2700\rept2700.aspx.cs">
+      <DependentUpon>rept2700.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Rmes\Rept\rept2700\rept2700.aspx.designer.cs">
+      <DependentUpon>rept2700.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Rmes\Rept\rept2800\rept2800.aspx.cs">
+      <DependentUpon>rept2800.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Rmes\Rept\rept2800\rept2800.aspx.designer.cs">
+      <DependentUpon>rept2800.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Rmes\Rept\rept3100\rept3100.aspx.cs">
+      <DependentUpon>rept3100.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Rmes\Rept\rept3100\rept3100.aspx.designer.cs">
+      <DependentUpon>rept3100.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Rmes\Rept\rept3200\rept3200.aspx.cs">
+      <DependentUpon>rept3200.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Rmes\Rept\rept3200\rept3200.aspx.designer.cs">
+      <DependentUpon>rept3200.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Rmes\Rept\rept3300\rept3300.aspx.cs">
+      <DependentUpon>rept3300.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Rmes\Rept\rept3300\rept3300.aspx.designer.cs">
+      <DependentUpon>rept3300.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Rmes\Rept\rept3400\rept3400.aspx.cs">
+      <DependentUpon>rept3400.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Rmes\Rept\rept3400\rept3400.aspx.designer.cs">
+      <DependentUpon>rept3400.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Rmes\Rept\rept3500\rept3500.aspx.cs">
+      <DependentUpon>rept3500.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Rmes\Rept\rept3500\rept3500.aspx.designer.cs">
+      <DependentUpon>rept3500.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Rmes\Rept\rept3600\rept3600.aspx.cs">
+      <DependentUpon>rept3600.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Rmes\Rept\rept3600\rept3600.aspx.designer.cs">
+      <DependentUpon>rept3600.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Rmes\Sam\sam1100\sam1100.aspx.cs">
+      <DependentUpon>sam1100.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Rmes\Sam\sam1100\sam1100.aspx.designer.cs">
+      <DependentUpon>sam1100.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Rmes\Sam\sam1200\sam1200.aspx.cs">
+      <DependentUpon>sam1200.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Rmes\Sam\sam1200\sam1200.aspx.designer.cs">
+      <DependentUpon>sam1200.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Rmes\Sam\sam1200\sam1201.aspx.cs">
+      <DependentUpon>sam1201.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Rmes\Sam\sam1200\sam1201.aspx.designer.cs">
+      <DependentUpon>sam1201.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Rmes\Sam\sam1300\sam1300.aspx.cs">
+      <DependentUpon>sam1300.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Rmes\Sam\sam1300\sam1300.aspx.designer.cs">
+      <DependentUpon>sam1300.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Rmes\Sam\sam1400\sam1400.aspx.cs">
+      <DependentUpon>sam1400.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Rmes\Sam\sam1400\sam1400.aspx.designer.cs">
+      <DependentUpon>sam1400.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Rmes\Sam\sam1500\sam1500.aspx.cs">
+      <DependentUpon>sam1500.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Rmes\Sam\sam1500\sam1500.aspx.designer.cs">
+      <DependentUpon>sam1500.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Rmes\Sam\sam2000\sam2000.aspx.cs">
+      <DependentUpon>sam2000.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Rmes\Sam\sam2000\sam2000.aspx.designer.cs">
+      <DependentUpon>sam2000.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Rmes\Sam\sam2000\sam2001.aspx.cs">
+      <DependentUpon>sam2001.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Rmes\Sam\sam2000\sam2001.aspx.designer.cs">
+      <DependentUpon>sam2001.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Rmes\Sam\sam2100\sam2100.aspx.cs">
+      <DependentUpon>sam2100.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Rmes\Sam\sam2100\sam2100.aspx.designer.cs">
+      <DependentUpon>sam2100.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Rmes\Sam\sam2200\sam2200.aspx.cs">
+      <DependentUpon>sam2200.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Rmes\Sam\sam2200\sam2200.aspx.designer.cs">
+      <DependentUpon>sam2200.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Rmes\Sam\sam2300\sam2300.aspx.cs">
+      <DependentUpon>sam2300.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Rmes\Sam\sam2300\sam2300.aspx.designer.cs">
+      <DependentUpon>sam2300.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Rmes\Sam\sam2400\sam2400.aspx.cs">
+      <DependentUpon>sam2400.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Rmes\Sam\sam2400\sam2400.aspx.designer.cs">
+      <DependentUpon>sam2400.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Rmes\Sam\sam2500\sam2500.aspx.cs">
+      <DependentUpon>sam2500.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Rmes\Sam\sam2500\sam2500.aspx.designer.cs">
+      <DependentUpon>sam2500.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Rmes\Sam\sam2600\sam2600.aspx.cs">
+      <DependentUpon>sam2600.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Rmes\Sam\sam2600\sam2600.aspx.designer.cs">
+      <DependentUpon>sam2600.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Rmes\Sam\sam2700\sam2700.aspx.cs">
+      <DependentUpon>sam2700.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Rmes\Sam\sam2700\sam2700.aspx.designer.cs">
+      <DependentUpon>sam2700.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Rmes\Sam\sam3100\sam3100.aspx.cs">
+      <DependentUpon>sam3100.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Rmes\Sam\sam3100\sam3100.aspx.designer.cs">
+      <DependentUpon>sam3100.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Rmes\Sam\sam3200\sam3200.aspx.cs">
+      <DependentUpon>sam3200.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Rmes\Sam\sam3200\sam3200.aspx.designer.cs">
+      <DependentUpon>sam3200.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Rmes\Sam\sam3300\sam3300.aspx.cs">
+      <DependentUpon>sam3300.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Rmes\Sam\sam3300\sam3300.aspx.designer.cs">
+      <DependentUpon>sam3300.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Rmes\Sam\sam3400\sam3400.aspx.cs">
+      <DependentUpon>sam3400.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Rmes\Sam\sam3400\sam3400.aspx.designer.cs">
+      <DependentUpon>sam3400.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Rmes\Ssd\ssd1000\ssd1000.aspx.cs">
+      <DependentUpon>ssd1000.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Rmes\Ssd\ssd1000\ssd1000.aspx.designer.cs">
+      <DependentUpon>ssd1000.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Rmes\Ssd\ssd1000\ssd1010.aspx.cs">
+      <DependentUpon>ssd1010.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Rmes\Ssd\ssd1000\ssd1010.aspx.designer.cs">
+      <DependentUpon>ssd1010.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Rmes\Ssd\ssd1000\ssd1020.aspx.cs">
+      <DependentUpon>ssd1020.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Rmes\Ssd\ssd1000\ssd1020.aspx.designer.cs">
+      <DependentUpon>ssd1020.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Rmes\Ssd\ssd1000\ssd1030.aspx.cs">
+      <DependentUpon>ssd1030.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Rmes\Ssd\ssd1000\ssd1030.aspx.designer.cs">
+      <DependentUpon>ssd1030.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Rmes\Ssd\ssd1000\ssd1042.aspx.cs">
+      <DependentUpon>ssd1042.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Rmes\Ssd\ssd1000\ssd1042.aspx.designer.cs">
+      <DependentUpon>ssd1042.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Rmes\Ssd\ssd1100\ssd1100.aspx.cs">
+      <DependentUpon>ssd1100.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Rmes\Ssd\ssd1100\ssd1100.aspx.designer.cs">
+      <DependentUpon>ssd1100.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Rmes\Ssd\ssd1200\ssd1200.aspx.cs">
+      <DependentUpon>ssd1200.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Rmes\Ssd\ssd1200\ssd1200.aspx.designer.cs">
+      <DependentUpon>ssd1200.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Rmes\Ssd\ssd1300\ssd1300.aspx.cs">
+      <DependentUpon>ssd1300.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Rmes\Ssd\ssd1300\ssd1300.aspx.designer.cs">
+      <DependentUpon>ssd1300.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Rmes\Ssd\ssd2100\ssd2100.aspx.cs">
+      <DependentUpon>ssd2100.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Rmes\Ssd\ssd2100\ssd2100.aspx.designer.cs">
+      <DependentUpon>ssd2100.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Rmes\Ssd\ssd2100\ssd2101.aspx.cs">
+      <DependentUpon>ssd2101.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Rmes\Ssd\ssd2100\ssd2101.aspx.designer.cs">
+      <DependentUpon>ssd2101.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Rmes\Ssd\ssd2200\ssd2200.aspx.cs">
+      <DependentUpon>ssd2200.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Rmes\Ssd\ssd2200\ssd2200.aspx.designer.cs">
+      <DependentUpon>ssd2200.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Rmes\Ssd\ssd3100\ssd3100.aspx.cs">
+      <DependentUpon>ssd3100.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Rmes\Ssd\ssd3100\ssd3100.aspx.designer.cs">
+      <DependentUpon>ssd3100.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Rmes\Ssd\ssd8000\ssd8000.aspx.cs">
+      <DependentUpon>ssd8000.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Rmes\Ssd\ssd8000\ssd8000.aspx.designer.cs">
+      <DependentUpon>ssd8000.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Rmes\Test\Class2.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Rmes\Test\Class3.cs" />
+    <Compile Include="Rmes\Test\MyDateEdit.ascx.cs">
+      <DependentUpon>MyDateEdit.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Rmes\Test\MyDateEdit.ascx.designer.cs">
+      <DependentUpon>MyDateEdit.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Rmes\Test\ProgressBarTest.aspx.cs">
+      <DependentUpon>ProgressBarTest.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Rmes\Test\ProgressBarTest.aspx.designer.cs">
+      <DependentUpon>ProgressBarTest.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Rmes\Test\sts.aspx.cs">
+      <DependentUpon>sts.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Rmes\Test\sts.aspx.designer.cs">
+      <DependentUpon>sts.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Rmes\Test\Test.aspx.cs">
+      <DependentUpon>Test.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Rmes\Test\Test.aspx.designer.cs">
+      <DependentUpon>Test.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Rmes\Test\test1.aspx.cs">
+      <DependentUpon>test1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Rmes\Test\test1.aspx.designer.cs">
+      <DependentUpon>test1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Rmes\Test\XtraReport1.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Rmes\Test\XtraReport1.Designer.cs">
+      <DependentUpon>XtraReport1.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\public\Rmes.Public.csproj">
+      <Project>{9469C71A-0F6E-4DFA-9D52-2DD5BEC34797}</Project>
+      <Name>Rmes.Public</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DA\Rmes.DA.csproj">
+      <Project>{B4B10860-4949-41E5-A264-81D74982E275}</Project>
+      <Name>Rmes.DA</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Themes\Aqua\ASPxButton.skin" />
+    <Content Include="App_Themes\Aqua\ASPxButtonEdit.skin" />
+    <Content Include="App_Themes\Aqua\ASPxCalendar.skin" />
+    <Content Include="App_Themes\Aqua\ASPxCallbackPanel.skin" />
+    <Content Include="App_Themes\Aqua\ASPxCaptcha.skin" />
+    <Content Include="App_Themes\Aqua\ASPxCheckBox.skin" />
+    <Content Include="App_Themes\Aqua\ASPxCloudControl.skin" />
+    <Content Include="App_Themes\Aqua\ASPxColorEdit.skin" />
+    <Content Include="App_Themes\Aqua\ASPxComboBox.skin" />
+    <Content Include="App_Themes\Aqua\ASPxDataView.skin" />
+    <Content Include="App_Themes\Aqua\ASPxDateEdit.skin" />
+    <Content Include="App_Themes\Aqua\ASPxDateNavigator.skin" />
+    <Content Include="App_Themes\Aqua\ASPxDockPanel.skin" />
+    <Content Include="App_Themes\Aqua\ASPxDropDownEdit.skin" />
+    <Content Include="App_Themes\Aqua\ASPxFileManager.skin" />
+    <Content Include="App_Themes\Aqua\ASPxFilterControl.skin" />
+    <Content Include="App_Themes\Aqua\ASPxGridLookup.skin" />
+    <Content Include="App_Themes\Aqua\ASPxGridView.skin" />
+    <Content Include="App_Themes\Aqua\ASPxHeadline.skin" />
+    <Content Include="App_Themes\Aqua\ASPxHtmlEditor.skin" />
+    <Content Include="App_Themes\Aqua\ASPxHyperLink.skin" />
+    <Content Include="App_Themes\Aqua\ASPxLabel.skin" />
+    <Content Include="App_Themes\Aqua\ASPxListBox.skin" />
+    <Content Include="App_Themes\Aqua\ASPxLoadingPanel.skin" />
+    <Content Include="App_Themes\Aqua\ASPxMemo.skin" />
+    <Content Include="App_Themes\Aqua\ASPxMenu.skin" />
+    <Content Include="App_Themes\Aqua\ASPxNavBar.skin" />
+    <Content Include="App_Themes\Aqua\ASPxNewsControl.skin" />
+    <Content Include="App_Themes\Aqua\ASPxPageControl.skin" />
+    <Content Include="App_Themes\Aqua\ASPxPager.skin" />
+    <Content Include="App_Themes\Aqua\ASPxPivotGrid.skin" />
+    <Content Include="App_Themes\Aqua\ASPxPopupControl.skin" />
+    <Content Include="App_Themes\Aqua\ASPxPopupMenu.skin" />
+    <Content Include="App_Themes\Aqua\ASPxProgressBar.skin" />
+    <Content Include="App_Themes\Aqua\ASPxRadioButton.skin" />
+    <Content Include="App_Themes\Aqua\ASPxRadioButtonList.skin" />
+    <Content Include="App_Themes\Aqua\ASPxRatingControl.skin" />
+    <Content Include="App_Themes\Aqua\ASPxRoundPanel.skin" />
+    <Content Include="App_Themes\Aqua\ASPxScheduler.skin" />
+    <Content Include="App_Themes\Aqua\ASPxSiteMapControl.skin" />
+    <Content Include="App_Themes\Aqua\ASPxSpellChecker.skin" />
+    <Content Include="App_Themes\Aqua\ASPxSpinEdit.skin" />
+    <Content Include="App_Themes\Aqua\ASPxSplitter.skin" />
+    <Content Include="App_Themes\Aqua\ASPxTabControl.skin" />
+    <Content Include="App_Themes\Aqua\ASPxTextBox.skin" />
+    <Content Include="App_Themes\Aqua\ASPxTimeEdit.skin" />
+    <Content Include="App_Themes\Aqua\ASPxTitleIndex.skin" />
+    <Content Include="App_Themes\Aqua\ASPxTreeList.skin" />
+    <Content Include="App_Themes\Aqua\ASPxTreeView.skin" />
+    <Content Include="App_Themes\Aqua\ASPxUploadControl.skin" />
+    <Content Include="App_Themes\Aqua\MonthEdit.skin" />
+    <Content Include="App_Themes\Aqua\RecurrenceTypeEdit.skin" />
+    <Content Include="App_Themes\Aqua\WeekDaysEdit.skin" />
+    <Content Include="App_Themes\Aqua\WeekOfMonthEdit.skin" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Themes\DevEx\ASPxButton.skin" />
+    <Content Include="App_Themes\DevEx\ASPxButtonEdit.skin" />
+    <Content Include="App_Themes\DevEx\ASPxCalendar.skin" />
+    <Content Include="App_Themes\DevEx\ASPxCallbackPanel.skin" />
+    <Content Include="App_Themes\DevEx\ASPxCaptcha.skin" />
+    <Content Include="App_Themes\DevEx\ASPxCheckBox.skin" />
+    <Content Include="App_Themes\DevEx\ASPxCloudControl.skin" />
+    <Content Include="App_Themes\DevEx\ASPxColorEdit.skin" />
+    <Content Include="App_Themes\DevEx\ASPxComboBox.skin" />
+    <Content Include="App_Themes\DevEx\ASPxDataView.skin" />
+    <Content Include="App_Themes\DevEx\ASPxDateEdit.skin" />
+    <Content Include="App_Themes\DevEx\ASPxDateNavigator.skin" />
+    <Content Include="App_Themes\DevEx\ASPxDockPanel.skin" />
+    <Content Include="App_Themes\DevEx\ASPxDropDownEdit.skin" />
+    <Content Include="App_Themes\DevEx\ASPxFileManager.skin" />
+    <Content Include="App_Themes\DevEx\ASPxFilterControl.skin" />
+    <Content Include="App_Themes\DevEx\ASPxGridLookup.skin" />
+    <Content Include="App_Themes\DevEx\ASPxGridView.skin" />
+    <Content Include="App_Themes\DevEx\ASPxHeadline.skin" />
+    <Content Include="App_Themes\DevEx\ASPxHtmlEditor.skin" />
+    <Content Include="App_Themes\DevEx\ASPxHyperLink.skin" />
+    <Content Include="App_Themes\DevEx\ASPxLabel.skin" />
+    <Content Include="App_Themes\DevEx\ASPxListBox.skin" />
+    <Content Include="App_Themes\DevEx\ASPxLoadingPanel.skin" />
+    <Content Include="App_Themes\DevEx\ASPxMemo.skin" />
+    <Content Include="App_Themes\DevEx\ASPxMenu.skin" />
+    <Content Include="App_Themes\DevEx\ASPxNavBar.skin" />
+    <Content Include="App_Themes\DevEx\ASPxNewsControl.skin" />
+    <Content Include="App_Themes\DevEx\ASPxPageControl.skin" />
+    <Content Include="App_Themes\DevEx\ASPxPager.skin" />
+    <Content Include="App_Themes\DevEx\ASPxPivotGrid.skin" />
+    <Content Include="App_Themes\DevEx\ASPxPopupControl.skin" />
+    <Content Include="App_Themes\DevEx\ASPxPopupMenu.skin" />
+    <Content Include="App_Themes\DevEx\ASPxProgressBar.skin" />
+    <Content Include="App_Themes\DevEx\ASPxRadioButton.skin" />
+    <Content Include="App_Themes\DevEx\ASPxRadioButtonList.skin" />
+    <Content Include="App_Themes\DevEx\ASPxRatingControl.skin" />
+    <Content Include="App_Themes\DevEx\ASPxRoundPanel.skin" />
+    <Content Include="App_Themes\DevEx\ASPxScheduler.skin" />
+    <Content Include="App_Themes\DevEx\ASPxSiteMapControl.skin" />
+    <Content Include="App_Themes\DevEx\ASPxSpellChecker.skin" />
+    <Content Include="App_Themes\DevEx\ASPxSpinEdit.skin" />
+    <Content Include="App_Themes\DevEx\ASPxSplitter.skin" />
+    <Content Include="App_Themes\DevEx\ASPxTabControl.skin" />
+    <Content Include="App_Themes\DevEx\ASPxTextBox.skin" />
+    <Content Include="App_Themes\DevEx\ASPxTimeEdit.skin" />
+    <Content Include="App_Themes\DevEx\ASPxTitleIndex.skin" />
+    <Content Include="App_Themes\DevEx\ASPxTreeList.skin" />
+    <Content Include="App_Themes\DevEx\ASPxTreeView.skin" />
+    <Content Include="App_Themes\DevEx\ASPxUploadControl.skin" />
+    <Content Include="App_Themes\DevEx\MonthEdit.skin" />
+    <Content Include="App_Themes\DevEx\RecurrenceTypeEdit.skin" />
+    <Content Include="App_Themes\DevEx\WeekDaysEdit.skin" />
+    <Content Include="App_Themes\DevEx\WeekOfMonthEdit.skin" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="bin\Rmes\File\excel\" />
+    <Folder Include="Rmes\Epd\App_LocalResources\" />
+    <Folder Include="Rmes\Epd\epd3700\App_LocalResources\" />
+    <Folder Include="Rmes\Epd\epd3800\App_LocalResources\" />
+    <Folder Include="Rmes\Pub\Images\Frame_Barcode\" />
+    <Folder Include="Rmes\Qms\qms1100\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="MasterPage.master" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Rmes\Sam\sam3400\sam3400.aspx" />
+    <Content Include="Rmes\Ssd\ssd1000\ssd1000.aspx" />
+    <Content Include="Rmes\Ssd\ssd1000\ssd1010.aspx" />
+    <Content Include="Rmes\Ssd\ssd1000\ssd1020.aspx" />
+    <Content Include="Rmes\Ssd\ssd1000\ssd1030.aspx" />
+    <Content Include="Rmes\Ssd\ssd1000\ssd1042.aspx" />
+    <Content Include="Rmes\Ssd\ssd1100\ssd1100.aspx" />
+    <Content Include="Rmes\Ssd\ssd1200\ssd1200.aspx" />
+    <Content Include="Rmes\Ssd\ssd1300\ssd1300.aspx" />
+    <Content Include="Rmes\Ssd\ssd2100\ssd2100.aspx" />
+    <Content Include="Rmes\Ssd\ssd2100\ssd2101.aspx" />
+    <Content Include="Rmes\Ssd\ssd2200\ssd2200.aspx" />
+    <Content Include="Rmes\Ssd\ssd3100\ssd3100.aspx" />
+    <Content Include="Rmes\Ssd\ssd8000\ssd8000.aspx" />
+    <Content Include="Rmes\Test\MyDateEdit.ascx" />
+    <Content Include="Rmes\Test\ProgressBarTest.aspx" />
+    <Content Include="Rmes\Test\sts.aspx" />
+    <Content Include="Rmes\Test\Test.aspx" />
+    <Content Include="Rmes\Test\test1.aspx" />
+    <Content Include="web.config">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="web.Debug.config">
+      <DependentUpon>web.config</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="web.Release.config">
+      <DependentUpon>web.config</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Themes\Theme1\Theme1.skin" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rmes\Exp\Exp1200\XtraReport3.resx">
+      <DependentUpon>XtraReport3.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rmes\Exp\Exp1300\XtraReport1.resx">
+      <DependentUpon>XtraReport1.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rmes\Exp\Exp1400\XtraReport2.resx">
+      <DependentUpon>XtraReport2.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rmes\Exp\Exp1500\XtraReport4.resx">
+      <DependentUpon>XtraReport4.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rmes\Exp\Exp1600\Report_Exp1600.resx">
+      <DependentUpon>Report_Exp1600.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rmes\Exp\Exp1700\Report_Exp1700.resx">
+      <DependentUpon>Report_Exp1700.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rmes\Exp\Exp2000\Report_Exp2000.resx">
+      <DependentUpon>Report_Exp2000.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rmes\Exp\Exp2000\Report_Exp2000_1.resx">
+      <DependentUpon>Report_Exp2000_1.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rmes\Exp\Exp2100\Report_Exp2100.resx">
+      <DependentUpon>Report_Exp2100.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rmes\Exp\Exp2200\Report_Exp2200.resx">
+      <DependentUpon>Report_Exp2200.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rmes\Exp\Exp2300\Report_Exp2300.resx">
+      <DependentUpon>Report_Exp2300.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rmes\Exp\Exp2400\Report_Exp2400.resx">
+      <DependentUpon>Report_Exp2400.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rmes\Test\Class2.resx">
+      <DependentUpon>Class2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rmes\Test\XtraReport1.resx">
+      <DependentUpon>XtraReport1.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="file\A\.net4.5.docx" />
+    <None Include="file\B\.net4.5.docx" />
+    <Content Include="Rmes\File\excel\1.xlsx" />
+    <Content Include="file\C\001.xlsx" />
+    <None Include="Rmes\File\excel\20160627111216.xls" />
+    <None Include="Rmes\File\excel\20160627112542.xls" />
+    <None Include="Rmes\File\excel\20160627113047.xls" />
+    <None Include="Rmes\File\excel\20160627113147.xls" />
+    <None Include="Rmes\File\excel\20160707131435G.xls" />
+    <None Include="Rmes\File\excel\20160707131757G.xls" />
+    <None Include="Rmes\File\excel\20160707131851G.xls" />
+    <None Include="Rmes\File\excel\20160707131909G.xls" />
+    <None Include="Rmes\File\excel\20160707132504G.xls" />
+    <None Include="Rmes\File\excel\20160708100021G.xls" />
+    <None Include="Rmes\File\excel\20160708100108G.xls" />
+    <None Include="Rmes\File\excel\20160708140357.xls" />
+    <None Include="Rmes\File\excel\20160708141055.xls" />
+    <None Include="Rmes\File\excel\20160708173524G.xls" />
+    <None Include="Rmes\File\excel\20160708173554G.xls" />
+    <None Include="Rmes\File\excel\20160708173816G.xls" />
+    <None Include="Rmes\File\excel\20160726143213.xls" />
+    <None Include="Rmes\File\excel\20160726143250.xls" />
+    <None Include="Rmes\File\excel\20160726143326.xls" />
+    <None Include="Rmes\File\excel\20160726145049.xls" />
+    <Content Include="Rmes\File\分装计划模板.xls" />
+    <Content Include="Rmes\File\拆解计划模板.xls" />
+    <Content Include="Rmes\File\改制计划模板.xls" />
+    <Content Include="Rmes\File\计划模板.xls" />
+    <Content Include="Rmes\File\计划模板.xlsx" />
+    <Content Include="Rmes\File\入出库\sfqd.xls" />
+    <Content Include="Rmes\File\出库模板\lshqd.xls">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Rmes\File\三方要料模板.xls" />
+    <None Include="Rmes\File\出库模板\sfqd.xls" />
+    <Content Include="Rmes\File\改制计划流水号模板.xls" />
+    <Content Include="Rmes\File\改制BOM对比\gzbomdb.xls">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>False</AutoAssignPort>
+          <DevelopmentServerPort>8086</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

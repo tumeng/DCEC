@@ -1,0 +1,7 @@
+/bin/
+/obj/
+*.dll
+*.suo
+*.user
+/Rmes.WebApp.Publish.xml
+Properties/licenses.licx

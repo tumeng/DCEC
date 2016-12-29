@@ -1,0 +1,376 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{B4B10860-4949-41E5-A264-81D74982E275}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Rmes.DA</RootNamespace>
+    <AssemblyName>Rmes.DA</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Debug\Rmes.DA.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;D:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisRuleDirectories>;D:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <CodeAnalysisLogFile>bin\Release\Rmes.DA.dll.CodeAnalysisLog.xml</CodeAnalysisLogFile>
+    <CodeAnalysisUseTypeNameInSuppression>true</CodeAnalysisUseTypeNameInSuppression>
+    <CodeAnalysisModuleSuppressionsFile>GlobalSuppressions.cs</CodeAnalysisModuleSuppressionsFile>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSetDirectories>;D:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\\Rule Sets</CodeAnalysisRuleSetDirectories>
+    <CodeAnalysisRuleDirectories>;D:\Program Files (x86)\Microsoft Visual Studio 10.0\Team Tools\Static Analysis Tools\FxCop\\Rules</CodeAnalysisRuleDirectories>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.Data.v11.1, Version=11.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Utils.v11.1, Version=11.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraEditors.v11.1, Version=11.1.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="Oracle.DataAccess, Version=2.112.1.0, Culture=neutral, PublicKeyToken=89b483f429c47342, processorArchitecture=AMD64">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\public\Lib\Oracle.DataAccess.dll</HintPath>
+    </Reference>
+    <Reference Include="PetaPoco">
+      <HintPath>..\public\Lib\PetaPoco.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Base\BaseClass.cs" />
+    <Compile Include="Base\BaseControlDA.cs" />
+    <Compile Include="Base\CsGlobalClass.cs" />
+    <Compile Include="Base\DBProcedure.cs" />
+    <Compile Include="Base\LoginInfo.cs" />
+    <Compile Include="Dal\AlineDal.cs" />
+    <Compile Include="Dal\AndonAlertDal.cs" />
+    <Compile Include="Dal\AtpuDal.cs" />
+    <Compile Include="Dal\BomReplaceDal.cs" />
+    <Compile Include="Dal\DetectErrorItemDal.cs" />
+    <Compile Include="Dal\DetectReportDal.cs" />
+    <Compile Include="Dal\IMESLine2LineDal.cs" />
+    <Compile Include="Dal\IMESPlanProcessDal.cs" />
+    <Compile Include="Dal\FaultDal.cs" />
+    <Compile Include="Dal\IMESCompleteBatchDal.cs" />
+    <Compile Include="Dal\IMESCompleteInstoreDal.cs" />
+    <Compile Include="Dal\IMESPlanBOMDal.cs" />
+    <Compile Include="Dal\IMESPlanChangeDal.cs" />
+    <Compile Include="Dal\IMESStore2LineDal.cs" />
+    <Compile Include="Dal\InterIssueDal.cs" />
+    <Compile Include="Dal\IssueReceivedDal.cs" />
+    <Compile Include="Dal\ItemLineSideDal.cs" />
+    <Compile Include="Dal\KeyWorklogDal.cs" />
+    <Compile Include="Dal\LinesideAutoIssueDal.cs" />
+    <Compile Include="Dal\LineSideMatDal.cs" />
+    <Compile Include="Dal\LinesideStoreDal.cs" />
+    <Compile Include="Dal\LocationDal.cs" />
+    <Compile Include="Dal\MusicDal.cs" />
+    <Compile Include="Dal\OPCMessageDal.cs" />
+    <Compile Include="Dal\OPCStationDal.cs" />
+    <Compile Include="Dal\OPCTagsDal.cs" />
+    <Compile Include="Dal\PlanBatchQTYDal.cs" />
+    <Compile Include="Dal\PlanBOMDal.cs" />
+    <Compile Include="Dal\PlanProcessDal.cs" />
+    <Compile Include="Dal\PlanProcessMainDal.cs" />
+    <Compile Include="Dal\PlanProcessNoteDal.cs" />
+    <Compile Include="Dal\PlanSnDal.cs" />
+    <Compile Include="Dal\PlanStandardBOMDal.cs" />
+    <Compile Include="Dal\ProcessDal.cs" />
+    <Compile Include="Dal\QualityDal.cs" />
+    <Compile Include="Dal\SAPBOMDal.cs" />
+    <Compile Include="Dal\SAPPlanDal.cs" />
+    <Compile Include="Dal\SAPPlanProcessDal.cs" />
+    <Compile Include="Dal\ScrapMaterialDal.cs" />
+    <Compile Include="Dal\SNCompleteInstoreDal.cs" />
+    <Compile Include="Dal\SNDetectTDal.cs" />
+    <Compile Include="Dal\StoreDal.cs" />
+    <Compile Include="Dal\TeamUser_PlineDal.cs" />
+    <Compile Include="Dal\User_WorkUnitDal.cs" />
+    <Compile Include="Dal\WMSstoreDal.cs" />
+    <Compile Include="Entity\AtpuEntity.cs" />
+    <Compile Include="Entity\BarCodeEntity.cs" />
+    <Compile Include="Entity\DetectBarCodeEntity.cs" />
+    <Compile Include="Entity\DetectErrorItemEntity.cs" />
+    <Compile Include="Entity\DetectReportEntity.cs" />
+    <Compile Include="Entity\EmergencyStore2LineEntity.cs" />
+    <Compile Include="Entity\IMESPlanProcessEntity.cs" />
+    <Compile Include="Entity\IMESCompleteBatchEntity.cs" />
+    <Compile Include="Entity\IMESCompleteInstoreEntity.cs" />
+    <Compile Include="Entity\IMESLine2LineEntity.cs" />
+    <Compile Include="Entity\IMESPlanBOMEntity.cs" />
+    <Compile Include="Entity\IMESPlanChangeEntity.cs" />
+    <Compile Include="Entity\IMESStore2LineEntity.cs" />
+    <Compile Include="Entity\ItemLineSideEntity.cs" />
+    <Compile Include="Entity\ItemReturnEntity.cs" />
+    <Compile Include="Entity\LinesideAutoIssueEntity.cs" />
+    <Compile Include="Entity\OPCTagsEntity.cs" />
+    <Compile Include="Entity\SAPPlanProcessEntity.cs" />
+    <Compile Include="Entity\SAPPlanEntity.cs" />
+    <Compile Include="Entity\LineSideStoreEntity.cs" />
+    <Compile Include="Entity\PlanBatchQTYEntity.cs" />
+    <Compile Include="Entity\PlanProcessEntity.cs" />
+    <Compile Include="Entity\PlanProcessMainEntity.cs" />
+    <Compile Include="Entity\PlanTempEntity.cs" />
+    <Compile Include="Dal\ProcessNoteDal.cs" />
+    <Compile Include="Dal\ProcessRoutingDal.cs" />
+    <Compile Include="Dal\ProductCompleteDal.cs" />
+    <Compile Include="Dal\ProductControlDal.cs" />
+    <Compile Include="Dal\AndonDal.cs" />
+    <Compile Include="Dal\DepartmentDal.cs" />
+    <Compile Include="Dal\DetectDataDal.cs" />
+    <Compile Include="Dal\FactoryDal.cs" />
+    <Compile Include="Dal\ItemDal.cs" />
+    <Compile Include="Dal\LineSideStockDal.cs" />
+    <Compile Include="Dal\MenuItemDal.cs" />
+    <Compile Include="Dal\PlanDal.cs" />
+    <Compile Include="Dal\PlanSubpackDal.cs" />
+    <Compile Include="Dal\ProductDataDal.cs" />
+    <Compile Include="Dal\ProductInfoDal.cs" />
+    <Compile Include="Dal\ProductLineDal.cs" />
+    <Compile Include="Dal\ProductSnDal.cs" />
+    <Compile Include="Dal\ProjectDal.cs" />
+    <Compile Include="Dal\ScreenLedDal.cs" />
+    <Compile Include="Dal\SNBomDal.cs" />
+    <Compile Include="Dal\SNBomItemSnDal.cs" />
+    <Compile Include="Dal\SNBomTempDal.cs" />
+    <Compile Include="Dal\SNControlsDal.cs" />
+    <Compile Include="Dal\SNDetectTempDal.cs" />
+    <Compile Include="Dal\SnEditDal.cs" />
+    <Compile Include="Dal\SNProcessDal.cs" />
+    <Compile Include="Dal\SNProcessTempDal.cs" />
+    <Compile Include="Dal\StationSubDal.cs" />
+    <Compile Include="Dal\TeamUserDal.cs" />
+    <Compile Include="Dal\UserDal.cs" />
+    <Compile Include="Dal\User_PlineDal.cs" />
+    <Compile Include="Dal\WorkShopDal.cs" />
+    <Compile Include="Dal\Workshop_PlineDal.cs" />
+    <Compile Include="Entity\AndonAlertEntity.cs" />
+    <Compile Include="Entity\AndonHintEntity.cs" />
+    <Compile Include="Entity\BomExchangeEntity.cs" />
+    <Compile Include="Entity\BroadcastEntity.cs" />
+    <Compile Include="Entity\CompanyEntity.cs" />
+    <Compile Include="Entity\FaultEntity.cs" />
+    <Compile Include="Entity\InterIssueEntity.cs" />
+    <Compile Include="Entity\IssueDetailEntity.cs" />
+    <Compile Include="Entity\IssueMasterEntity.cs" />
+    <Compile Include="Entity\IssueReceivedEntity.cs" />
+    <Compile Include="Entity\ItemEntity.cs" />
+    <Compile Include="Entity\KeyWorklogEntity.cs" />
+    <Compile Include="Entity\LineSideStock.cs" />
+    <Compile Include="Entity\MusicEntity.cs" />
+    <Compile Include="Entity\OPCMessageEntity.cs" />
+    <Compile Include="Entity\PlanBomEntity.cs" />
+    <Compile Include="Entity\PlanProcessNoteEntity.cs" />
+    <Compile Include="Entity\PlanSubpackEntity.cs" />
+    <Compile Include="Dal\PlanTempDal.cs" />
+    <Compile Include="Entity\ProcessEntity.cs" />
+    <Compile Include="Entity\ProcessFileEntity.cs" />
+    <Compile Include="Entity\ProcessNoteEntity.cs" />
+    <Compile Include="Entity\ProductCompleteEntity.cs" />
+    <Compile Include="Entity\ProductEntity.cs" />
+    <Compile Include="Entity\ProductInfoEntity.cs" />
+    <Compile Include="Entity\ProjectDetailEntity.cs" />
+    <Compile Include="Entity\ProjectEntity.cs" />
+    <Compile Include="Entity\SAPBOMEntity.cs" />
+    <Compile Include="Entity\SAPMessageTransEntity.cs" />
+    <Compile Include="Entity\ScrapMaterialEntity.cs" />
+    <Compile Include="Entity\SeriesBarCodeEntity.cs" />
+    <Compile Include="Entity\SNBomEntity.cs" />
+    <Compile Include="Entity\SNBomItemSnEntity.cs" />
+    <Compile Include="Entity\SNBomTempEntity.cs" />
+    <Compile Include="Entity\SNCompleteInstoreEntity.cs" />
+    <Compile Include="Entity\SNControlEntity.cs" />
+    <Compile Include="Entity\SNDetectEntity.cs" />
+    <Compile Include="Entity\SnEditEntity.cs" />
+    <Compile Include="Entity\SNProcessEntity.cs" />
+    <Compile Include="Entity\SNProcessTempEntity.cs" />
+    <Compile Include="Entity\Store2LineTempEntity.cs" />
+    <Compile Include="Entity\StoreEntity.cs" />
+    <Compile Include="Entity\TeamUserEntity.cs" />
+    <Compile Include="Entity\TeamUser_PlineEntity.cs" />
+    <Compile Include="Entity\User_PlineEntity.cs" />
+    <Compile Include="Entity\User_WorkUnitEntity.cs" />
+    <Compile Include="Entity\WMSstoreEntity.cs" />
+    <Compile Include="Entity\WorkShopEntity.cs" />
+    <Compile Include="Entity\Workshop_PlineEntity.cs" />
+    <Compile Include="Entity\ItemLineSideStore2LineEntity.cs" />
+    <Compile Include="Factory\AlineFactory.cs" />
+    <Compile Include="Factory\AtpuFactory.cs" />
+    <Compile Include="Factory\BomReplaceFactory.cs" />
+    <Compile Include="Factory\BroadCastFactory.cs" />
+    <Compile Include="Factory\DetectErrorItemFactory.cs" />
+    <Compile Include="Factory\DetectReportFactory.cs" />
+    <Compile Include="Factory\IMESLine2LineFactory.cs" />
+    <Compile Include="Factory\IMESPlanProcessFactory.cs" />
+    <Compile Include="Factory\FaultFactory.cs" />
+    <Compile Include="Factory\IMESCompleteBatchFactory.cs" />
+    <Compile Include="Factory\IMESCompleteInstoreFactory.cs" />
+    <Compile Include="Factory\IMESPlanBOMFactory.cs" />
+    <Compile Include="Factory\IMESPlanChangeFactory.cs" />
+    <Compile Include="Factory\IMESStore2LineFactory.cs" />
+    <Compile Include="Factory\InterIssueFactory.cs" />
+    <Compile Include="Factory\IssueReceivedFactory.cs" />
+    <Compile Include="Factory\ItemLineSideFactory.cs" />
+    <Compile Include="Factory\KeyWorklogFactory.cs" />
+    <Compile Include="Factory\LedProcFactory.cs" />
+    <Compile Include="Factory\LinesideAutoIssueFactory.cs" />
+    <Compile Include="Factory\LineSideMatFactory.cs" />
+    <Compile Include="Factory\LinesideStoreFactory.cs" />
+    <Compile Include="Factory\LocationFactory.cs" />
+    <Compile Include="Factory\MusicFactory.cs" />
+    <Compile Include="Factory\OPCMessageFactory.cs" />
+    <Compile Include="Factory\OPCStationFactory.cs" />
+    <Compile Include="Factory\OPCTagsFactory.cs" />
+    <Compile Include="Factory\PlanBatchQTYFactory.cs" />
+    <Compile Include="Factory\PlanBOMFactory.cs" />
+    <Compile Include="Factory\PlanProcessFactory.cs" />
+    <Compile Include="Factory\PlanProcessMainFactory.cs" />
+    <Compile Include="Factory\PlanProcessNoteFactory.cs" />
+    <Compile Include="Factory\PlanSnFactory.cs" />
+    <Compile Include="Factory\PlanStandardBOMFactory.cs" />
+    <Compile Include="Factory\PlanTempFactory.cs" />
+    <Compile Include="Factory\ProcessFactory.cs" />
+    <Compile Include="Factory\ProcessNoteFactory.cs" />
+    <Compile Include="Factory\ProcessRoutingFactory.cs" />
+    <Compile Include="Factory\ProductCompleteFactory.cs" />
+    <Compile Include="Factory\ProductControlFactory.cs" />
+    <Compile Include="Entity\DepartmentEntity.cs" />
+    <Compile Include="Entity\DetectDataEntity.cs" />
+    <Compile Include="Entity\FaultListEntity.cs" />
+    <Compile Include="Entity\FaultTreeEntity.cs" />
+    <Compile Include="Entity\LocationEntity.cs" />
+    <Compile Include="Entity\MenuItemEntity.cs" />
+    <Compile Include="Entity\MessageHeadEntity.cs" />
+    <Compile Include="Entity\PlanEntity.cs" />
+    <Compile Include="Entity\PlanSnEntity.cs" />
+    <Compile Include="Entity\PlanStandardBOMEntity.cs" />
+    <Compile Include="Entity\ProcessRoutingEntity.cs" />
+    <Compile Include="Entity\ProductControlEntity.cs" />
+    <Compile Include="Entity\ProductLineEntity.cs" />
+    <Compile Include="Entity\ProductSnEntity.cs" />
+    <Compile Include="Entity\QualityItemEntity.cs" />
+    <Compile Include="Entity\ScreenLEDEntity.cs" />
+    <Compile Include="Entity\ShiftEntity.cs" />
+    <Compile Include="Entity\SNDetectTempEntity.cs" />
+    <Compile Include="Entity\StationEntity.cs" />
+    <Compile Include="Entity\StationSubEntity.cs" />
+    <Compile Include="Entity\TeamEntity.cs" />
+    <Compile Include="Entity\UserEntity.cs" />
+    <Compile Include="Entity\WorkProcessEntity.cs" />
+    <Compile Include="Entity\WorkProcessFileEntity.cs" />
+    <Compile Include="Factory.cs" />
+    <Compile Include="Factory\AndonFactory.cs" />
+    <Compile Include="Factory\DepartmentFactory.cs" />
+    <Compile Include="Factory\DetectDataFactory.cs" />
+    <Compile Include="Factory\ItemFactory.cs" />
+    <Compile Include="Factory\LineSideStockFactory.cs" />
+    <Compile Include="Factory\MenuItemFactory.cs" />
+    <Compile Include="Factory\PlanSubpackFactory.cs" />
+    <Compile Include="Factory\ProductDataFactory.cs" />
+    <Compile Include="Factory\ProductInfoFactory.cs" />
+    <Compile Include="Factory\ProductLineFactory.cs" />
+    <Compile Include="Factory\ProductSnFactory.cs" />
+    <Compile Include="Factory\ProjectFactory.cs" />
+    <Compile Include="Factory\QualityFactory.cs" />
+    <Compile Include="Factory\SAPBOMFactory.cs" />
+    <Compile Include="Factory\SAPPlanFactory.cs" />
+    <Compile Include="Factory\SAPPlanProcessFactory.cs" />
+    <Compile Include="Factory\ScrapMaterialDal.cs" />
+    <Compile Include="Factory\ScreenLedFactory.cs" />
+    <Compile Include="Factory\SNBomFactory.cs" />
+    <Compile Include="Factory\SNBomItemSnFactory.cs" />
+    <Compile Include="Factory\SNBomTempFactory.cs" />
+    <Compile Include="Factory\SNCompleteInstoreFactory.cs" />
+    <Compile Include="Factory\SNControlFactory.cs" />
+    <Compile Include="Factory\SNDetectFactory.cs" />
+    <Compile Include="Factory\SNDetectTempFactory.cs" />
+    <Compile Include="Factory\SnEditFactory.cs" />
+    <Compile Include="Factory\SNProcessFactory.cs" />
+    <Compile Include="Factory\SNProcessTempFactory.cs" />
+    <Compile Include="Factory\StationSubFactory.cs" />
+    <Compile Include="Factory\StoreFactory.cs" />
+    <Compile Include="Factory\TeamUserFactory.cs" />
+    <Compile Include="Factory\User_PlineFactory.cs" />
+    <Compile Include="Factory\User_WorkUnitFactory.cs" />
+    <Compile Include="Factory\WMSstoreFactory.cs" />
+    <Compile Include="Factory\WorkShopFactory.cs" />
+    <Compile Include="Factory\Workshop_PlineFactory.cs" />
+    <Compile Include="FaultList.cs" />
+    <Compile Include="FaultTree.cs" />
+    <Compile Include="Function.cs" />
+    <Compile Include="Message.cs" />
+    <Compile Include="Factory\PlanFactory.cs" />
+    <Compile Include="Procedure\Procedures.cs" />
+    <Compile Include="Product.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Factory\UserFactory.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\public\Rmes.Public.csproj">
+      <Project>{9469C71A-0F6E-4DFA-9D52-2DD5BEC34797}</Project>
+      <Name>Rmes.Public</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

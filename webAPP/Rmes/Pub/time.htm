@@ -1,0 +1,184 @@
+ <html>   
+  <head>     
+  <title>时间选择器</title>   
+  <style>   
+  body     
+  {   
+  margin-left:   0px;   
+  margin-top:   10px;   
+  margin-right:   0px;   
+  margin-bottom:   0px;   
+  background-color:   #d4d0c8;   
+  }   
+  input.txt   
+  {     
+  BORDER-TOP:   lightgrey   1px   solid;     
+  BORDER-LEFT:   lightgrey   1px   solid;   
+  BORDER-RIGHT:lightgrey   1px   solid;   
+  BORDER-BOTTOM:   lightgrey   1px   solid;     
+  BACKGROUND-COLOR:   #d4d0c8;   
+  }   
+  input.btn   
+  {   
+  font-family:   宋体   Fixedsys;     
+  font-size:12px;   
+  BORDER-RIGHT:   royalblue   1px   solid;   
+  BORDER-TOP:   royalblue       1px   solid;   
+  BORDER-LEFT:   royalblue   1px   solid;   
+  LINE-HEIGHT:   16px;     
+  BORDER-BOTTOM:   royalblue   1px   solid;     
+  HEIGHT:   18px;   
+  BACKGROUND-COLOR:   lightblue;     
+  cursor:hand;   
+  COLOR:   royalblue;     
+  }   
+  body,td   
+  {   
+  font-size:   12px;   
+  }   
+  .N   
+  {   
+  display:none;   
+  }   
+  .B   
+  {   
+  display:block;   
+  }   
+  </style>   
+  <meta   http-equiv="Content-Type"   content="text/html;   charset=gb2312" /></head>   
+  <body>   
+  <table   width="98%" style="height:170" border="1" align="center" cellpadding="0" cellspacing="0"   >   
+      <tr>   
+          <td  style="width:270"   id="tdDate" >   
+              <object   id="C1"   height="170"   width="270" onMouseMove="setDate();" classid="clsid:8E27C92B-1264-101C-8A2F-040224009C02">
+                  <param name="_Version"  value="524288" />
+                  <param   name="_ExtentX"   value="7144" />
+                  <param name="_ExtentY" value="4498" />
+                  <param name="_StockProps" value="1" />
+                  <param name="BackColor" value="-2147483633" />
+                  <param name="Year" value="2008" />
+                  <param name="Month" value="01" />
+                  <param name="Day" value="01" />
+                  <param name="DayLength" value="0" />
+                  <param name="MonthLength" value="0" />
+                  <param name="DayFontColor" value="0" />
+                  <param name="FirstDay" value="1" />
+                  <param name="GridCellEffect" value="1" />
+                  <param name="GridFontColor" value="10485760" />
+                  <param name="GridLinesColor" value="-2147483632" />
+                  <param name="ShowDateSelectors" value="-1" />
+                  <param name="ShowDays" value="-1" />
+                  <param name="ShowHorizontalGrid" value="-1" />
+                  <param name="ShowTitle" value="-1" />
+                  <param name="ShowVerticalGrid" value="-1" />
+                  <param name="TitleFontColor" value="10485760" />
+                  <param name="ValueIsNull" value="0" />
+                </object>
+             </td>
+             <td   style="width:180" align="center" valign="middle">             
+        
+                  <table width="100%" border="0" cellpadding="0" cellspacing="0" id="tbTime">   
+                  <tr>   
+                      <td align="center" scope="row" valign="middle">系统时间   <span id="text1"></span>   </td>   
+                  </tr>  
+                  <tr>
+                  <td>&nbsp;</td>
+                  </tr> 
+                  <tr>   
+                      <td align="left" scope="row">设置时间：</td>   
+                  </tr>   
+                  <tr>   
+                      <td align="left" scope="row"><select id="s1" onchange="settime();"></select>时<select id="s2" onchange="settime();"></select>分<select id="s3" onchange="settime();"></select>秒</td>   
+                  </tr>   
+                  <tr>   
+                      <td align="left" scope="row"><input id="text2" /></td>   
+                  </tr>   
+              </table>   
+              <br />
+                  <table width="100%" border="0" cellspacing="0" cellpadding="0" id="tbDate">   
+                      <tr>   
+                          <td align="left" scope="row">日期：   <br/>   
+                          <input id="text3" /></td>   
+                      </tr>   
+                  </table>   
+                  <br/>   
+          <input type="button" onClick="rtn();" value="确定"/></td>   
+      </tr>   
+  </table>   
+  <br/>   
+  <br/>   
+  <script language="javascript" type="text/javascript">   
+
+  setDate();   
+  iniTime();
+  function   iniTime()   
+  {   
+  text1.innerText=getMyTime();     
+  addAll(s1,23);   
+  addAll(s2,59);   
+  addAll(s3,59);   
+  d   =   new   Date();   
+  s1.selectedIndex=d.getHours();   
+  s2.selectedIndex=d.getMinutes();   
+  s3.selectedIndex=d.getSeconds();   
+  window.setInterval("text1.innerText=getMyTime();","1000");   
+  settime();   
+    }   
+  function   getobj(obj)   
+  {   
+  for(i=1;i<obj.document.all.length;i++)   
+  {   
+  if(obj==obj.document.all(i))   
+  {   
+  return(obj.document.all(i-1))   
+  }   
+  }   
+  }   
+  function   settime()   
+  {   
+  text2.value=s1.value+":"+s2.value+":"+s3.value;   
+  }   
+  function   setDate()   
+  {   
+  if(text3.value   !=   C1.Year   +   "-"   +   C1.Month   +   "-"   +   C1.Day)   
+  {   
+  text3.value=C1.Year   +   "-"   +   C1.Month   +   "-"   +   C1.Day;   
+  }   
+  }   
+  function   rtn(obj)   
+  {   
+  var   r=new   String("");   
+  r=text3.value   +   " "   +   text2.value;   
+  r=r.replace(/(^[\s]*)|([\s]*$)/g,   "");   
+  getobj(window.dialogArguments).value=r;   
+  self.close();     
+  }   
+    
+  function   getMyTime(){   
+        var   d,   s   =   "";   
+        var   c   =   ":";   
+        d   =   new   Date();   
+
+        s   +=   d.getHours()   +   c;   
+        s   +=   d.getMinutes()   +   c;   
+        s   +=   d.getSeconds();     
+        return(s)     ;   
+  }   
+  function   addAll(obj,n)   
+  {   
+  var   ooo=document.createElement("<OPTION>");   
+  for(i=0;i<=n;i++)   
+  {   
+    add(obj,i,i);   
+  }   
+  }   
+  function   add(obj,v,t)   
+  {   
+  var   ooo=document.createElement("<OPTION>");   
+  ooo.value=v;   
+  ooo.text=t;   
+  obj.add(ooo);   
+  }   
+  </script>   
+  </body>   
+  </html>   

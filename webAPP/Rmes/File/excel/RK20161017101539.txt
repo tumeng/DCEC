@@ -1,0 +1,129 @@
+create index IDX_QAD_BOM on QAD_BOM (ABOM_SO, ABOM_JHDM) nologging tablespace TBS_ATPUUSER_IND01;
+create index IDX_QAD_BOM_1 on QAD_BOM (ABOM_PAR, ABOM_COMP, ABOM_JHDM) nologging tablespace TBS_ATPUUSER_IND01;
+create index IDX_BOMDAILY_JHDM on QAD_BOMDAILY (ABOM_JHDM) nologging tablespace TBS_ATPUUSER_IND01;
+create index IDX_QAD_XXPTMP on QAD_XXPTMP_MSTR (XXPTMP_JHDM, XXPTMP_PAR) nologging tablespace TBS_ATPUUSER_IND01;
+create index JHDM_IDX on RST_QAD_TEMPPRTPART (JHDM) nologging tablespace TBS_ATPUUSER_IND01;
+
+
+qad_bom  ABOM_JHDM  // ABOM_JHDM ABOM_COMP  //
+copy_ps_mstr ABOM_START  ABOM_END ABOM_PAR ABOM_COMP //
+data_plan_standard_bom 
+COPY_IN_MSTR IN_PART IN_SITE
+RST_ATPU_ZJTS JHDM TSTYPE //JHDM PART
+data_process_note plan_so pline_code note_type
+
+
+create index IDX_DATACOMPLETE_PLANCODE on DATA_COMPLETE (PLAN_CODE)
+  tablespace MESUSER
+  pctfree 10
+  initrans 2
+  maxtrans 255
+  storage
+  (
+    initial 64K
+    next 1M
+    minextents 1
+    maxextents unlimited
+  );
+create index IDX_DATACOMPLETE_PLINECODE on DATA_COMPLETE (PLINE_CODE)
+  tablespace MESUSER
+  pctfree 10
+  initrans 2
+  maxtrans 255
+  storage
+  (
+    initial 64K
+    next 1M
+    minextents 1
+    maxextents unlimited
+  );
+create index IDX_DATACOMPLETE_SHIFTCODE on DATA_COMPLETE (SHIFT_CODE)
+  tablespace MESUSER
+  pctfree 10
+  initrans 2
+  maxtrans 255
+  storage
+  (
+    initial 64K
+    next 1M
+    minextents 1
+    maxextents unlimited
+  );
+create index IDX_DATACOMPLETE_SN on DATA_COMPLETE (SN)
+  tablespace MESUSER
+  pctfree 10
+  initrans 2
+  maxtrans 255
+  storage
+  (
+    initial 64K
+    next 1M
+    minextents 1
+    maxextents unlimited
+  );
+create index IDX_DATACOMPLETE_STARTTIME on DATA_COMPLETE (START_TIME)
+  tablespace MESUSER
+  pctfree 10
+  initrans 2
+  maxtrans 255
+  storage
+  (
+    initial 64K
+    next 1M
+    minextents 1
+    maxextents unlimited
+  );
+create index IDX_DATACOMPLETE_STATIONCODE on DATA_COMPLETE (STATION_CODE)
+  tablespace MESUSER
+  pctfree 10
+  initrans 2
+  maxtrans 255
+  storage
+  (
+    initial 64K
+    next 1M
+    minextents 1
+    maxextents unlimited
+  );
+create index IDX_DATA_COMPLETE_1 on DATA_COMPLETE (SN, PLINE_CODE, STATION_CODE)
+  tablespace USERS
+  pctfree 10
+  initrans 2
+  maxtrans 255
+  storage
+  (
+    initial 64K
+    next 1M
+    minextents 1
+    maxextents unlimited
+  );
+
+
+
+create index IDX_DATASNDETECT_SDD on DATA_SN_DETECT_DATA (SN, DETECT_CODE, DETECT_VALUE)
+  tablespace MESUSER
+  pctfree 10
+  initrans 2
+  maxtrans 255
+  storage
+  (
+    initial 64K
+    next 1M
+    minextents 1
+    maxextents unlimited
+  );
+-- Create/Recreate primary, unique and foreign key constraints 
+alter table DATA_SN_DETECT_DATA
+  add constraint PK_DATA_PLAN_1 primary key (RMES_ID)
+  using index 
+  tablespace USERS
+  pctfree 10
+  initrans 2
+  maxtrans 255
+  storage
+  (
+    initial 128K
+    next 1M
+    minextents 1
+    maxextents unlimited
+  );
